@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import clsx from 'classnames'
 import { motion } from 'framer-motion'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
@@ -8,6 +9,24 @@ import Projects from './pages/Projects.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 import Articles from './pages/Articles.jsx'
+
+const THEME_KEY = 'kaiyo-theme'
+
+function getInitialTheme() {
+  if (typeof window === 'undefined') {
+    return false
+  }
+
+  const storedTheme = window.localStorage.getItem(THEME_KEY)
+  if (storedTheme === 'dark') {
+    return true
+  }
+  if (storedTheme === 'light') {
+    return false
+  }
+
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+}
 
 function ScrollToTop() {
   const location = useLocation()
@@ -20,8 +39,21 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  const [isDarkMode, setIsDarkMode] = useState(getInitialTheme)
+
+  useEffect(() => {
+    const root = document.documentElement
+    root.classList.toggle('theme-dark', isDarkMode)
+    window.localStorage.setItem(THEME_KEY, isDarkMode ? 'dark' : 'light')
+  }, [isDarkMode])
+
   return (
-    <div className="relative min-h-screen overflow-x-hidden font-sans text-slate-900 selection:bg-slate-900 selection:text-white">
+    <div
+      className={clsx(
+        'relative min-h-screen overflow-x-hidden font-sans transition-colors duration-300 selection:bg-slate-900 selection:text-white',
+        isDarkMode ? 'theme-dark text-slate-100' : 'text-slate-900'
+      )}
+    >
       <ScrollToTop />
 
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
@@ -43,7 +75,7 @@ export default function App() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.7),transparent_48%)]" />
       </div>
 
-      <Navbar />
+      <Navbar isDarkMode={isDarkMode} onToggleTheme={() => setIsDarkMode((prev) => !prev)} />
 
       <main className="mx-auto flex w-full max-w-[1180px] flex-1 flex-col px-4 pb-16 pt-28 sm:px-8 sm:pt-32 lg:px-12">
         <div className="shell-panel relative overflow-hidden rounded-[2rem] px-5 py-8 sm:px-8 sm:py-10 lg:px-10">
