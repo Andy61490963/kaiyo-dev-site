@@ -1,5 +1,15 @@
 ﻿export const projects = [
   {
+    title: '主檔維護',
+    category: '資料表管理系統',
+    year: '2026',
+    description:
+      '建構可配置式資料管理平台，透過動態欄位設定支援一對多與多對多關聯的 CRUD 操作',
+    tech: ['C#', 'ASP.NET Core Api', '內容管理', '系統設計'],
+    github: null,
+    demo: null,
+  },
+  {
     title: '車證申請',
     category: '校務流程系統',
     year: '2024',
@@ -48,15 +58,5 @@
     tech: ['C#', 'ASP.NET Core MVC', '內容管理', '分類設計'],
     github: null,
     demo: null,
-  },
-  {
-    title: '主檔維護',
-    category: '資料表管理系統',
-    year: '2026',
-    description:
-      '建構可配置式資料管理平台，透過動態欄位設定支援一對多與多對多關聯的 CRUD 操作',
-    tech: ['C#', 'ASP.NET Core Api', '內容管理', '系統設計'],
-    github: null,
-    demo: null,
-  },
+  }
 ]
