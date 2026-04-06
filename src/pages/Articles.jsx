@@ -43,7 +43,7 @@ export default function Articles() {
 
               <p className="text-sm leading-7 text-slate-600">{article.description}</p>
 
-              <a
+              {/* <a
                 href={article.href}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -51,7 +51,7 @@ export default function Articles() {
               >
                 開啟連結
                 <ExternalLink className="h-4 w-4" />
-              </a>
+              </a> */}
             </div>
           </article>
         ))}
