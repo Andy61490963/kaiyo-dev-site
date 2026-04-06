@@ -3,7 +3,7 @@ import { ExternalLink, Terminal } from 'lucide-react'
 
 const footerLinks = [
   {
-    label: 'GitHub 個人頁',
+    label: 'GitHub',
     href: 'https://github.com/Andy61490963',
   },
   {

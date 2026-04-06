@@ -24,9 +24,9 @@ const coreAreas = [
 ]
 
 const stats = [
-  { value: '2 年', label: '開發經驗', detail: '系統開發與異質系統整合實務經驗' },
+  { value: '3 年', label: '開發經驗', detail: '系統開發與異質系統整合實務經驗' },
   { value: '5+', label: '專案實績', detail: '校務、行政、工單、健檢與內容管理系統' },
-  { value: '2025', label: '現職角色', detail: '威友科技後端工程師' },
+  { value: '2026', label: '現職角色', detail: '威友科技後端工程師' },
 ]
 
 export default function Home() {
@@ -48,14 +48,14 @@ export default function Home() {
 
           <div className="space-y-5">
             <h1 className="section-title max-w-4xl">
-              許愷佑 Andy
+              Andy
               <span className="mt-3 block text-slate-500">
                 系統開發與異質系統整合
               </span>
             </h1>
 
             <p className="max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
-              具備 2 年系統開發實務經驗，專注把複雜流程整理成可落地的系統
+              具備 2 年系統開發實務經驗，把複雜流程整理成可落地的系統
             </p>
           </div>
 
@@ -102,8 +102,8 @@ export default function Home() {
             <div className="terminal-outline rounded-2xl px-4 py-3 sm:col-span-2">
               <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-slate-500">我擅長解決的問題</div>
               <div className="mt-3 grid gap-2 text-sm leading-6 text-slate-700">
-                <p>將混亂或仰賴人工的流程，整理成可追蹤、可維護的系統流程</p>
-                <p>處理高併發、編號衝突、Deadlock 等資料一致性與穩定性問題</p>
+                <p>將混亂或仰賴人工的流程，整理成可追蹤、可維護、自動化的系統流程</p>
+                <p>分析公司、客戶的需求，將痛點一一擊破</p>
                 <p>在既有系統中導入模組化與責任分離，降低維護與擴充成本</p>
               </div>
             </div>
@@ -122,9 +122,9 @@ export default function Home() {
               <span className="mono text-[0.72rem] uppercase tracking-[0.22em]">履歷重點</span>
             </div>
             <h2 className="text-2xl font-semibold text-slate-900">不只把功能做出來，也把流程、穩定性和維護成本一起處理好</h2>
-            <p className="text-sm leading-7 text-slate-600">
+            {/* <p className="text-sm leading-7 text-slate-600">
               目前於威友科技擔任後端工程師，負責產線流程分析、MES 導入、資料流規劃與系統重構；此前於國立臺東大學系統發展組參與多項校務與行政系統開發，累積流程型系統的完整實作經驗
-            </p>
+            </p> */}
 
             <ul className="space-y-3">
               {featuredMilestones.map((item) => (
