@@ -14,6 +14,19 @@ A personal portfolio site for Andy, adapted from a reference Vite + React portfo
 
 This version is a polished starter portfolio connected to the GitHub repository `Andy61490963/kaiyo-dev-site`.
 
+## GitHub Pages Deployment
+
+This repository now includes a GitHub Actions workflow at `.github/workflows/deploy-pages.yml`.
+
+To publish it with GitHub Pages:
+
+- Open repository settings on GitHub
+- Go to `Pages`
+- Set the source to `GitHub Actions`
+- Push to `main`
+
+After that, each push to `main` will rebuild and redeploy the site automatically.
+
 ## Next Edits You May Want
 
 - Replace the placeholder biography with your own story
