@@ -1,6 +1,6 @@
 ﻿export const certifications = [
   {
-    title: '威友科技有限公司後端工程師',
+    title: '威友科技後端工程師',
     shortTitle: 'MES / 後端',
     issuer: '2025/7 - 在職',
     year: '2026',
@@ -10,7 +10,7 @@
     href: 'https://github.com/Andy61490963',
   },
   {
-    title: '國立臺東大學系統發展組工程師',
+    title: '臺東大學系統發展組工程師',
     shortTitle: '校務系統',
     issuer: '2024/2 - 2025/6',
     year: '2025',

@@ -1,5 +1,5 @@
 ﻿export const contact = {
-  name: '許愷佑',
+  name: 'Andy',
   title: '後端工程師 / 系統整合開發者',
   githubUsername: 'Andy61490963',
   location: '新竹市',

@@ -50,7 +50,7 @@ export default function Home() {
             <h1 className="section-title max-w-4xl">
               Andy
               <span className="mt-3 block text-slate-500">
-                系統開發與異質系統整合
+                系統開發與異質系統整合工程師
               </span>
             </h1>
 
@@ -121,10 +121,10 @@ export default function Home() {
               <Rocket className="h-4 w-4" />
               <span className="mono text-[0.72rem] uppercase tracking-[0.22em]">履歷重點</span>
             </div>
-            <h2 className="text-2xl font-semibold text-slate-900">不只把功能做出來，也把流程、穩定性和維護成本一起處理好</h2>
-            {/* <p className="text-sm leading-7 text-slate-600">
-              目前於威友科技擔任後端工程師，負責產線流程分析、MES 導入、資料流規劃與系統重構；此前於國立臺東大學系統發展組參與多項校務與行政系統開發，累積流程型系統的完整實作經驗
-            </p> */}
+            <h2 className="text-2xl font-semibold text-slate-900">複雜場景的解決方案</h2>
+            <p className="text-sm leading-7 text-slate-600">
+              不走一般作品集的路線，而是把專案的問題拆分，解釋解決了什麼問題
+            </p>
 
             <ul className="space-y-3">
               {featuredMilestones.map((item) => (
