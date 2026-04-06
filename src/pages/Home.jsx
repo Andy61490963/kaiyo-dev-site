@@ -8,25 +8,25 @@ import { projects } from '../data/projects.js'
 const highlights = [
   {
     icon: Layers3,
-    title: '瘚?頧頂蝯?,
-    text: '???砌趕鞈港犖撌亙?雿?瘚?嚗???航蕭頩扎蝬剛風?頂蝯梯身閮?,
+    title: '流程轉系統',
+    text: '把原本仰賴人工協作的流程，整理成可追蹤、可維護的系統設計。',
   },
   {
     icon: Radar,
-    title: '閫?捱?祕??',
-    text: '??擃蔥?潦????湔扼???蝔??瑟?蝬剛風?蝑祕??憿?,
+    title: '解決真實問題',
+    text: '處理高併發、資料一致性、權限流程與長期維護成本等實務問題。',
   },
   {
     icon: Rocket,
-    title: '?賜蝡??,
-    text: '敺?瘙???蝡臬祕雿銝?敺雁霅瘀??賜帘摰??畾菟??潭?蝔?,
+    title: '能獨立推進',
+    text: '從需求分析、後端實作到上線後維護，能穩定完成整段開發流程。',
   },
 ]
 
 const stats = [
-  { value: '3 撟?, label: '?蝬?', detail: '蝟餌絞???祕?? },
-  { value: '6+', label: '隞?”撠?', detail: '?∪????踴極?株?鞈??游?' },
-  { value: 'C# / .NET', label: '?詨??銵?, detail: '敺垢???蝔頂蝯勗遣蝵? },
+  { value: '3 年', label: '開發經驗', detail: '系統開發與整合實務' },
+  { value: '6+', label: '代表專案', detail: '校務、行政、工單與資料整合' },
+  { value: 'C# / .NET', label: '核心技術', detail: '後端開發與流程系統建置' },
 ]
 
 export default function Home() {
@@ -44,20 +44,23 @@ export default function Home() {
         >
           <div className="hero-ribbon">
             <span className="hero-ribbon__dot" />
-            ?犖雿?蝬脩? / ???湔銝?          </div>
+            個人作品網站 / 持續更新中
+          </div>
 
           <div className="grid gap-7 lg:grid-cols-[minmax(0,1fr)_260px] lg:items-start">
             <div className="space-y-5">
               <div className="space-y-3">
-                <div className="hero-eyebrow">Backend Engineer 繚 System Integration</div>
+                <div className="hero-eyebrow">Backend Engineer · System Integration</div>
                 <h1 className="section-title max-w-4xl">Andy</h1>
               </div>
 
               <p className="max-w-3xl text-lg leading-9 text-slate-600 sm:text-[1.1rem]">
-                ?瑕?銝僑蝟餌絞?撖血?蝬?嚗?銴?瘚??渡???賢?頂蝯?              </p>
+                具備三年系統開發實務經驗，把複雜流程整理成可落地的系統。
+              </p>
 
               <p className="inline-flex w-fit whitespace-nowrap rounded-full border border-slate-200/80 bg-white/80 px-4 py-2 text-sm font-medium tracking-[0.08em] text-slate-500 sm:text-base">
-                蝟餌絞?&?游?撌亦?撣?              </p>
+                系統開發異質系統整合工程師
+              </p>
             </div>
 
             <motion.div
@@ -78,12 +81,12 @@ export default function Home() {
 
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <Link to="/projects" className="terminal-button terminal-button--primary">
-              ?亦?撠?蝬?
+              查看專案經驗
               <ArrowRight className="h-4 w-4" />
             </Link>
 
             <Link to="/about" className="terminal-button terminal-button--ghost">
-              ?亦??犖?
+              查看個人背景
             </Link>
           </div>
 
@@ -94,7 +97,7 @@ export default function Home() {
             className="grid gap-4 sm:grid-cols-2"
           >
             <div className="terminal-outline rounded-[1.5rem] px-5 py-4">
-              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-slate-500">閫摰?</div>
+              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-slate-500">角色定位</div>
               <div className="mt-2 text-sm text-slate-900">{contact.title}</div>
             </div>
 
@@ -109,11 +112,11 @@ export default function Home() {
             </div>
 
             <div className="terminal-outline rounded-[1.5rem] px-5 py-4 sm:col-span-2">
-              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-slate-500">???瑁圾瘙箇???</div>
+              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-slate-500">我擅長解決的問題</div>
               <div className="mt-3 grid gap-2 text-sm leading-7 text-slate-700">
-                <p>撠毽鈭?隞啗陷鈭箏極??蝔??渡??餈質馱?蝬剛風????頂蝯望?蝔?/p>
-                <p>???砍?蝙?刻?瘙??圾??銝西???瑁????質身閮?/p>
-                <p>?冽?頂蝯曹葉撠璅∠???鞎砌遙?嚗?雿雁霅瑁??游??</p>
+                <p>將混亂或仰賴人工的流程，整理成可追蹤、可維護、自動化的系統流程。</p>
+                <p>分析公司與使用者需求，拆解痛點並轉成可執行的功能設計。</p>
+                <p>在既有系統中導入模組化與責任分離，降低維護與擴充成本。</p>
               </div>
             </div>
           </motion.div>
@@ -128,15 +131,16 @@ export default function Home() {
           <div className="glass-card__inner">
             <div className="flex items-center gap-2 text-slate-500">
               <Sparkles className="h-4 w-4" />
-              <span className="mono text-[0.72rem] uppercase tracking-[0.22em]">????</span>
+              <span className="mono text-[0.72rem] uppercase tracking-[0.22em]">重點摘要</span>
             </div>
 
             <h2 className="text-2xl font-semibold leading-snug text-slate-900">
-              ?典?蝡航?瘚?閮剛?嚗??祕?湔銝剔?銴????渡?皜?
+              用後端與流程設計，把真實場景中的複雜問題整理清楚。
             </h2>
 
             <p className="text-sm leading-7 text-slate-600">
-              Focus?潭?蝔?蝟餌絞?鞈芰頂蝯望???舐雁霅瑞?敺垢?嗆?嚗?暺??芸?摰?嚗??蝛拙??扼?????蝥????            </p>
+              Focus 於流程型系統、異質系統整合與可維護的後端架構，重點不只在功能完成，也包含穩定性、資料流與後續擴充成本。
+            </p>
 
             <div className="space-y-3 rounded-[1.5rem] border border-slate-200/80 bg-slate-50/80 p-4">
               <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-slate-500">GitHub</div>
@@ -152,11 +156,11 @@ export default function Home() {
             </div>
 
             <div className="space-y-3 rounded-[1.5rem] border border-slate-200/80 bg-white/80 p-4">
-              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-slate-500">?桀??</div>
+              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-slate-500">目前聚焦</div>
               <ul className="space-y-2 text-sm leading-7 text-slate-600">
-                <li>瘚??頂蝯梯身閮???</li>
-                <li>鞈?瘚??閫甈??抒恣</li>
-                <li>?舐雁霅瑞?敺垢?蝯?</li>
+                <li>流程型系統設計與重構</li>
+                <li>資料流整理與角色權限控管</li>
+                <li>可維護的後端開發結構</li>
               </ul>
             </div>
           </div>
@@ -209,13 +213,13 @@ export default function Home() {
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div className="space-y-2">
             <div className="hero-eyebrow">Selected Projects</div>
-            <h2 className="text-3xl font-semibold tracking-[-0.04em] text-slate-900">隞?”撠?</h2>
+            <h2 className="text-3xl font-semibold tracking-[-0.04em] text-slate-900">代表專案</h2>
           </div>
           <Link
             to="/projects"
             className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-slate-900"
           >
-            ?亦?摰撠??”
+            查看完整專案列表
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
