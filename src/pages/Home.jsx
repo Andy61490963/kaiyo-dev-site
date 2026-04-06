@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight, Github, Radar, Rocket, Workflow } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <section className="space-y-16 sm:space-y-20">
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start">
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-start">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,7 +70,12 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, delay: 0.15 }}
+            className="grid gap-3 sm:grid-cols-2"
+          >
             <div className="terminal-outline rounded-2xl px-4 py-3">
               <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-slate-500">角色定位</div>
               <div className="mt-2 text-sm text-slate-900">{contact.title}</div>
@@ -107,12 +112,13 @@ export default function Home() {
                 <p>在既有系統中導入模組化與責任分離，降低維護與擴充成本</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
 
         <motion.aside
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
+          whileHover={{ y: -4 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="glass-card"
         >
@@ -148,27 +154,43 @@ export default function Home() {
 
       <div className="grid gap-4 sm:grid-cols-3">
         {stats.map((item) => (
-          <div key={item.label} className="glass-card">
+          <motion.div
+            key={item.label}
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -5 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.3 }}
+            className="glass-card"
+          >
             <div className="glass-card__inner">
               <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-slate-500">{item.label}</div>
               <div className="text-4xl font-semibold text-slate-900">{item.value}</div>
               <div className="text-sm leading-6 text-slate-500">{item.detail}</div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
       <div className="grid gap-5 lg:grid-cols-3">
         {coreAreas.map((item) => (
-          <div key={item.title} className="glass-card">
+          <motion.div
+            key={item.title}
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -5 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.35 }}
+            className="glass-card group"
+          >
             <div className="glass-card__inner">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-slate-700">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-slate-700 transition group-hover:border-sky-200 group-hover:bg-sky-50 group-hover:text-sky-700">
                 <item.icon className="h-5 w-5" />
               </div>
               <h2 className="text-xl font-semibold text-slate-900">{item.title}</h2>
               <p className="text-sm leading-7 text-slate-600">{item.text}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

@@ -1,5 +1,6 @@
-﻿import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import clsx from 'classnames'
+import { motion } from 'framer-motion'
 import { Code2, Menu, TerminalSquare, X } from 'lucide-react'
 import { NavLink, useLocation } from 'react-router-dom'
 
@@ -13,20 +14,41 @@ const navItems = [
 
 export default function Navbar() {
   const [isMobileOpen, setIsMobileOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
 
   useEffect(() => {
     setIsMobileOpen(false)
   }, [location.pathname])
 
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 20)
+
+    onScroll()
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
     <header className="fixed left-1/2 top-4 z-40 w-[calc(100%-1.25rem)] max-w-6xl -translate-x-1/2">
-      <nav className="rounded-[1.15rem] border border-slate-200/90 bg-white/85 px-4 py-3 shadow-[0_12px_30px_rgba(15,23,42,0.08)] backdrop-blur-xl sm:px-6">
+      <motion.nav
+        animate={{ y: isScrolled ? -2 : 0, scale: isScrolled ? 0.985 : 1 }}
+        transition={{ duration: 0.22, ease: 'easeOut' }}
+        className={clsx(
+          'rounded-[1.15rem] border bg-white/85 px-4 py-3 backdrop-blur-xl sm:px-6',
+          isScrolled
+            ? 'border-slate-200/95 shadow-[0_18px_44px_rgba(15,23,42,0.12)]'
+            : 'border-slate-200/90 shadow-[0_12px_30px_rgba(15,23,42,0.08)]'
+        )}
+      >
         <div className="flex items-center justify-between gap-4">
           <NavLink to="/" className="flex min-w-0 items-center gap-3 text-slate-900">
-            <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-slate-700">
+            <motion.span
+              whileHover={{ rotate: -6, scale: 1.04 }}
+              className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-slate-700"
+            >
               <Code2 className="h-5 w-5" />
-            </span>
+            </motion.span>
             <span className="min-w-0">
               <span className="mono block text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-slate-500">
                 Andy / 個人作品網站
@@ -55,10 +77,10 @@ export default function Navbar() {
                   to={item.to}
                   className={({ isActive }) =>
                     clsx(
-                      'mono inline-flex rounded-full px-3 py-2 transition xl:px-4',
+                      'mono inline-flex rounded-full px-3 py-2 transition duration-200 xl:px-4',
                       isActive
                         ? 'bg-slate-900 text-white'
-                        : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                        : 'text-slate-600 hover:-translate-y-0.5 hover:bg-slate-100 hover:text-slate-900'
                     )
                   }
                 >
@@ -87,7 +109,7 @@ export default function Navbar() {
                 to={item.to}
                 className={({ isActive }) =>
                   clsx(
-                    'mono block rounded-xl px-4 py-3 transition',
+                    'mono block rounded-xl px-4 py-3 transition duration-200',
                     isActive
                       ? 'bg-slate-900 text-white'
                       : 'bg-slate-50 text-slate-700 hover:bg-slate-100'
@@ -99,7 +121,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-      </nav>
+      </motion.nav>
     </header>
   )
 }

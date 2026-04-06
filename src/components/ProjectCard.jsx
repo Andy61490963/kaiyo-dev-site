@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import { ExternalLink, Github } from 'lucide-react'
 
@@ -7,9 +7,10 @@ export default function ProjectCard({ project }) {
     <motion.article
       initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ y: -6 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.35 }}
-      className="glass-card h-full"
+      className="glass-card group h-full"
     >
       <div className="glass-card__inner h-full">
         <div className="space-y-3">
@@ -23,7 +24,7 @@ export default function ProjectCard({ project }) {
               </h3>
             </div>
             {project.year && (
-              <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-slate-500">
+              <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-slate-500 transition group-hover:border-sky-200 group-hover:bg-sky-50 group-hover:text-sky-700">
                 {project.year}
               </span>
             )}
@@ -33,7 +34,7 @@ export default function ProjectCard({ project }) {
 
         <ul className="flex flex-wrap gap-2 text-xs text-slate-600">
           {project.tech.map((tag) => (
-            <li key={tag} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5">
+            <li key={tag} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 transition group-hover:border-slate-300 group-hover:bg-white">
               {tag}
             </li>
           ))}
