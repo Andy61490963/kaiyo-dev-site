@@ -34,7 +34,10 @@ export default function ProjectCard({ project }) {
 
         <ul className="flex flex-wrap gap-2 text-xs text-slate-600">
           {project.tech.map((tag) => (
-            <li key={tag} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 transition group-hover:border-slate-300 group-hover:bg-white">
+            <li
+              key={tag}
+              className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 transition group-hover:border-slate-300 group-hover:bg-white"
+            >
               {tag}
             </li>
           ))}
@@ -60,7 +63,7 @@ export default function ProjectCard({ project }) {
               className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
             >
               <ExternalLink className="h-4 w-4" />
-              線上展示
+              查看內容
             </a>
           )}
         </div>

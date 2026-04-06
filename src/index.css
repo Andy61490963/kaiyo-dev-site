@@ -6,15 +6,7 @@
 
 :root {
   color-scheme: light;
-  --bg: #f8fafc;
-  --bg-soft: #eef4ff;
-  --panel: rgba(255, 255, 255, 0.88);
-  --line: #d8e2f0;
-  --line-strong: #bfd0e5;
-  --brand: #1d4ed8;
-  --brand-soft: #dbeafe;
   --text: #0f172a;
-  --muted: #475569;
 }
 
 html {
@@ -25,9 +17,9 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(191, 219, 254, 0.55), transparent 30%),
-    radial-gradient(circle at top right, rgba(226, 232, 240, 0.65), transparent 24%),
-    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 52%, #eef2ff 100%);
+    radial-gradient(circle at top left, rgba(226, 232, 240, 0.8), transparent 28%),
+    radial-gradient(circle at top right, rgba(219, 234, 254, 0.75), transparent 24%),
+    linear-gradient(180deg, #f8fafc 0%, #f4f7fb 45%, #eef2f8 100%);
   color: var(--text);
   font-family: 'Noto Sans TC', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -40,18 +32,17 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
-  background-size: 44px 44px;
-  mask-image: radial-gradient(circle at center, black, transparent 88%);
-  opacity: 0.5;
+    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at center, black, transparent 82%);
+  opacity: 0.55;
 }
 
 h1,
 h2,
 h3,
 h4,
-.font-display,
 .mono {
   font-family: 'IBM Plex Mono', 'Noto Sans TC', monospace;
 }
@@ -61,39 +52,51 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
+.shell-panel {
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.48)),
+    rgba(255, 255, 255, 0.45);
+  box-shadow:
+    0 35px 90px rgba(15, 23, 42, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.85) inset;
+  backdrop-filter: blur(22px);
+}
+
 .glass-card {
   position: relative;
   overflow: hidden;
-  border-radius: 1.5rem;
-  padding: clamp(1.15rem, 1rem + 0.6vw, 1.55rem);
-  background: rgba(255, 255, 255, 0.84);
-  border: 1px solid rgba(191, 208, 229, 0.9);
+  border-radius: 1.6rem;
+  padding: clamp(1.2rem, 1rem + 0.7vw, 1.6rem);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(248, 250, 252, 0.78));
   box-shadow:
-    0 12px 30px rgba(15, 23, 42, 0.06),
-    0 1px 0 rgba(255, 255, 255, 0.8) inset;
-  backdrop-filter: blur(14px);
+    0 18px 42px rgba(15, 23, 42, 0.06),
+    0 1px 0 rgba(255, 255, 255, 0.9) inset;
+  backdrop-filter: blur(16px);
   transition:
-    transform 0.22s ease,
-    border-color 0.22s ease,
-    box-shadow 0.22s ease,
-    background 0.22s ease;
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    box-shadow 0.24s ease,
+    background 0.24s ease;
 }
 
 .glass-card::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.45), transparent 45%, rgba(219, 234, 254, 0.35));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.55), transparent 42%, rgba(224, 242, 254, 0.4));
   opacity: 0;
-  transition: opacity 0.22s ease;
+  transition: opacity 0.24s ease;
   pointer-events: none;
 }
 
 .glass-card:hover {
-  border-color: rgba(147, 197, 253, 0.9);
+  border-color: rgba(186, 230, 253, 0.95);
   box-shadow:
-    0 20px 44px rgba(15, 23, 42, 0.08),
-    0 1px 0 rgba(255, 255, 255, 0.85) inset;
+    0 24px 54px rgba(15, 23, 42, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.95) inset;
 }
 
 .glass-card:hover::after {
@@ -110,38 +113,89 @@ button {
 }
 
 .section-title {
-  font-size: clamp(2rem, 1.7rem + 1.5vw, 3.35rem);
-  line-height: 1.08;
+  font-size: clamp(2.35rem, 1.9rem + 1.8vw, 4rem);
+  line-height: 1;
   font-weight: 700;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.05em;
   color: #0f172a;
 }
 
-.terminal-label {
+.hero-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.hero-ribbon {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.6rem;
   border-radius: 999px;
-  border: 1px solid var(--line-strong);
-  background: rgba(255, 255, 255, 0.75);
-  padding: 0.48rem 0.9rem;
+  border: 1px solid rgba(203, 213, 225, 0.9);
+  background: rgba(255, 255, 255, 0.82);
+  padding: 0.5rem 0.95rem;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #334155;
+  color: #475569;
 }
 
-.terminal-dot {
-  height: 0.5rem;
-  width: 0.5rem;
+.hero-ribbon__dot {
+  height: 0.52rem;
+  width: 0.52rem;
   border-radius: 999px;
-  background: var(--brand);
+  background: linear-gradient(135deg, #0f172a, #38bdf8);
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(203, 213, 225, 0.88);
+  background: rgba(255, 255, 255, 0.84);
+  padding: 0.45rem 0.9rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #475569;
+}
+
+.section-kicker__dot {
+  width: 0.48rem;
+  height: 0.48rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0f172a, #38bdf8);
+}
+
+.portrait-frame {
+  overflow: hidden;
+  border-radius: 1.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(241, 245, 249, 0.86));
+  padding: 0.65rem;
+  box-shadow:
+    0 22px 50px rgba(15, 23, 42, 0.12),
+    0 1px 0 rgba(255, 255, 255, 0.95) inset;
+  backdrop-filter: blur(14px);
+}
+
+.premium-aside {
+  position: sticky;
+  top: 7rem;
 }
 
 .terminal-outline {
-  border: 1px solid rgba(203, 213, 225, 0.95);
+  border: 1px solid rgba(226, 232, 240, 0.95);
   background: rgba(255, 255, 255, 0.72);
   transition:
     transform 0.2s ease,
@@ -151,8 +205,8 @@ button {
 
 .terminal-outline:hover {
   transform: translateY(-2px);
-  border-color: rgba(147, 197, 253, 0.9);
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
+  border-color: rgba(186, 230, 253, 0.95);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.06);
 }
 
 .terminal-button {
@@ -161,7 +215,7 @@ button {
   justify-content: center;
   gap: 0.55rem;
   border-radius: 999px;
-  padding: 0.88rem 1.3rem;
+  padding: 0.92rem 1.35rem;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.84rem;
   font-weight: 600;
@@ -179,17 +233,26 @@ button {
 .terminal-button--primary {
   background: #0f172a;
   color: #f8fafc;
-  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 14px 26px rgba(15, 23, 42, 0.12);
 }
 
 .terminal-button--ghost {
   border: 1px solid rgba(203, 213, 225, 1);
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.82);
   color: #0f172a;
 }
 
 @media (max-width: 768px) {
   .glass-card {
-    border-radius: 1.1rem;
+    border-radius: 1.2rem;
+  }
+
+  .portrait-frame {
+    border-radius: 1.4rem;
+  }
+
+  .premium-aside {
+    position: relative;
+    top: auto;
   }
 }
