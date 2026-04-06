@@ -31,6 +31,7 @@ const stats = [
 
 export default function Home() {
   const featuredMilestones = certifications.slice(0, 3)
+  const profileImage = '/5B609B4A-6DFD-4FE8-8C64-0F5BC0B996F1.jpg'
 
   return (
     <section className="space-y-16 sm:space-y-20">
@@ -46,7 +47,8 @@ export default function Home() {
             履歷網站 / 持續更新中
           </div>
 
-          <div className="space-y-5">
+          <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_220px] lg:items-center">
+            <div className="space-y-5">
             <h1 className="section-title max-w-4xl">
               Andy
               <span className="mt-3 block text-slate-500">
@@ -57,6 +59,22 @@ export default function Home() {
             <p className="max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
               具備三年系統開發實務經驗，把複雜流程整理成可落地的系統
             </p>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 16 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.45, delay: 0.1 }}
+              className="mx-auto w-full max-w-[220px]"
+            >
+              <div className="overflow-hidden rounded-[1.75rem] border border-white/80 bg-white/70 p-2 shadow-[0_18px_40px_rgba(15,23,42,0.12)] backdrop-blur-sm">
+                <img
+                  src={profileImage}
+                  alt="Andy"
+                  className="h-[260px] w-full rounded-[1.15rem] object-cover object-center"
+                />
+              </div>
+            </motion.div>
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
