@@ -45,7 +45,7 @@ export default function App() {
 
       <Navbar />
 
-      <main className="mx-auto flex w-full max-w-[1180px] flex-1 flex-col px-4 pb-16 pt-36 sm:px-8 sm:pt-40 lg:px-12">
+      <main className="mx-auto flex w-full max-w-[1180px] flex-1 flex-col px-4 pb-16 pt-28 sm:px-8 sm:pt-32 lg:px-12">
         <div className="shell-panel relative overflow-hidden rounded-[2rem] px-5 py-8 sm:px-8 sm:py-10 lg:px-10">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
 
