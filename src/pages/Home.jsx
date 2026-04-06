@@ -8,18 +8,18 @@ import { certifications } from '../data/certifications.js'
 const coreAreas = [
   {
     icon: Workflow,
-    title: '系統開發與異質系統整合',
-    text: '我具備兩年系統開發與異質系統整合經驗，能從需求訪談、流程分析一路做到系統設計與後期維護。',
+    title: '把流程變成可落地的系統',
+    text: '擅長整理校務、行政與產線流程，將原本仰賴人工協作的作業轉成可追蹤、可維護的系統流程。',
   },
   {
     icon: Rocket,
-    title: '流程系統與後端實作',
-    text: '我熟悉校務、行政、MES 等流程型系統建置，擅長把真實作業流程整理成可落地的系統功能。',
+    title: '從需求到上線能獨立推進',
+    text: '涵蓋需求分析、流程設計、後端實作到後期維護，能獨立完成流程型系統開發並持續優化。',
   },
   {
     icon: Radar,
-    title: '重構與問題解決能力',
-    text: '我曾處理高併發、Deadlock、Race Condition 等問題，也能透過設計模式、模組化與 Log 機制提升系統品質。',
+    title: '處理真實系統問題',
+    text: '曾解決高併發、編號衝突、Deadlock 與系統耦合問題，透過交易控制、模組化與 Log 機制提升穩定性。',
   },
 ]
 
@@ -48,14 +48,14 @@ export default function Home() {
 
           <div className="space-y-5">
             <h1 className="section-title max-w-4xl">
-              Andy
+              許愷佑 Andy
               <span className="mt-3 block text-slate-500">
-                專注於後端開發、流程系統與系統整合
+                後端工程師｜系統開發與異質系統整合
               </span>
             </h1>
 
             <p className="max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
-              您好，我是 Andy，擁有兩年系統開發與異質系統整合經驗。從需求訪談、系統設計到後期維護皆有實務經驗，具備獨立完成專案的能力。
+              具備 2 年系統開發實務經驗，專注把複雜流程整理成可落地的系統。從需求分析、流程設計到後端實作與維護，能獨立完成專案並持續優化系統品質。
             </p>
           </div>
 
@@ -98,6 +98,15 @@ export default function Home() {
                 {contact.githubUsername}
               </a>
             </div>
+
+            <div className="terminal-outline rounded-2xl px-4 py-3 sm:col-span-2">
+              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-slate-500">我擅長解決的問題</div>
+              <div className="mt-3 grid gap-2 text-sm leading-6 text-slate-700">
+                <p>將混亂或仰賴人工的流程，整理成可追蹤、可維護的系統流程</p>
+                <p>處理高併發、編號衝突、Deadlock 等資料一致性與穩定性問題</p>
+                <p>在既有系統中導入模組化與責任分離，降低維護與擴充成本</p>
+              </div>
+            </div>
           </div>
         </motion.div>
 
@@ -112,9 +121,9 @@ export default function Home() {
               <Rocket className="h-4 w-4" />
               <span className="mono text-[0.72rem] uppercase tracking-[0.22em]">履歷重點</span>
             </div>
-            <h2 className="text-2xl font-semibold text-slate-900">從校務系統到 MES 流程，持續累積後端實務能力</h2>
+            <h2 className="text-2xl font-semibold text-slate-900">不只把功能做出來，也把流程、穩定性和維護成本一起處理好</h2>
             <p className="text-sm leading-7 text-slate-600">
-              目前我在威友科技擔任後端工程師，負責產線流程分析、MES 作業流程導入、資料流規劃與系統重構；在此之前，曾於國立臺東大學系統發展組參與多項校務與行政系統開發。
+              目前於威友科技擔任後端工程師，負責產線流程分析、MES 導入、資料流規劃與系統重構；此前於國立臺東大學系統發展組參與多項校務與行政系統開發，累積流程型系統的完整實作經驗。
             </p>
 
             <ul className="space-y-3">
