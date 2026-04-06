@@ -1,34 +1,34 @@
 ﻿export const articles = [
   {
-    title: '我希望這個網站未來變成什麼樣子',
-    platform: '作品集',
-    category: '規劃方向',
+    title: '兩年系統開發與異質系統整合經驗',
+    platform: '經歷重點',
+    category: '個人背景',
     description:
-      '這個網站現在先從自我介紹開始，之後希望逐步整理成能記錄專案、學習內容，以及我做軟體時思考方式的個人空間。',
-    href: 'https://github.com/Andy61490963/kaiyo-dev-site',
-  },
-  {
-    title: '打造能降低工作摩擦的內部工具',
-    platform: '實作想法',
-    category: '工程思維',
-    description:
-      '我很常關注那些重複又耗時的流程，並試著把它們做成小而穩定、團隊也容易使用的工具。',
+      '我具備從需求訪談、流程分析、系統設計到後期維護的完整實務經驗，也能獨立處理專案開發與整合工作。',
     href: 'https://github.com/Andy61490963',
   },
   {
-    title: '在前端體驗與後端穩定性之間取得平衡',
-    platform: '開發方法',
-    category: '全端開發',
+    title: 'MES 流程導入與資料流規劃',
+    platform: '工作內容',
+    category: '後端實務',
     description:
-      '我喜歡同時重視畫面體驗與技術結構的專案，因為一個值得信任的產品，通常是這兩件事一起做好。',
-    href: 'https://github.com/Andy61490963/e-commerce-websites',
+      '在威友科技擔任後端工程師期間，我參與產線流程分析、MES 作業流程導入、系統資料流規劃，以及重構與架構優化工作。',
+    href: 'https://github.com/Andy61490963',
   },
   {
-    title: '把公開 Repo 當成持續成長的筆記',
-    platform: 'GitHub',
-    category: '學習紀錄',
+    title: '校務與行政系統開發經驗',
+    platform: '工作內容',
+    category: '系統建置',
     description:
-      '就算專案還不完美，先公開出來也能幫助我把程式碼當成成長紀錄，而不是一直等到完美才敢分享。',
+      '在臺東大學系統發展組期間，我參與校務與行政系統開發，負責需求分析、流程設計、系統實作，以及多項自動化解決方案。',
+    href: 'https://github.com/Andy61490963',
+  },
+  {
+    title: '高併發與系統維護問題處理',
+    platform: '問題解決',
+    category: '技術能力',
+    description:
+      '我曾處理 Race Condition、Deadlock、案件編號重複等問題，也透過 Transaction、async/await、Log 機制與模組化設計改善系統品質。',
     href: 'https://github.com/Andy61490963',
   },
 ]

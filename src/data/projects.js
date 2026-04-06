@@ -1,52 +1,52 @@
 ﻿export const projects = [
   {
-    title: '選課系統 API',
-    category: '後端 API',
-    year: '2025',
-    description:
-      '這是一個以選課流程為核心的 API 專案，重點放在資料設計、流程串接，以及實際系統會需要的後端架構。',
-    tech: ['C#', '.NET', 'API 設計', '資料庫'],
-    github: 'https://github.com/Andy61490963/CourseSelectionSystemApi',
-    demo: null,
-  },
-  {
-    title: '電商網站作品',
-    category: '前端實作',
+    title: '車證申請系統',
+    category: '校務流程系統',
     year: '2024',
     description:
-      '這是一組偏向電商展示的網站作品，重點在商品呈現、版面設計，以及如何做出更容易使用的前端介面。',
-    tech: ['HTML', 'CSS', 'JavaScript', '前端開發'],
-    github: 'https://github.com/Andy61490963/e-commerce-websites',
+      '建立完整的申請、審核、發證流程，支援狀態控管、外部 API 身份判別、角色權限管理、附件上傳、歷程紀錄與資料匯入匯出功能。',
+    tech: ['C#', 'ASP.NET Core MVC', 'MS SQL', 'API 串接', '權限管理'],
+    github: null,
     demo: null,
   },
   {
-    title: '資料生命週期管理工具',
-    category: '自動化工具',
+    title: '校安事件通報系統',
+    category: '行政通報系統',
+    year: '2024',
+    description:
+      '建立事件通報與查詢機制，支援附件管理、統計分析、自動產生 PDF 承簽文件，以及推播通知流程。',
+    tech: ['C#', 'ASP.NET Core MVC', 'PDF 產生', '通知機制', '資料查詢'],
+    github: null,
+    demo: null,
+  },
+  {
+    title: '新生健檢系統',
+    category: '資料整合系統',
+    year: '2024',
+    description:
+      '設計資料匯入與欄位對應機制，建立異常值自動比對、警示通知、健康紀錄查詢、統計報表與異常追蹤流程。',
+    tech: ['C#', 'ASP.NET Core MVC', '資料匯入', '報表', '異常追蹤'],
+    github: null,
+    demo: null,
+  },
+  {
+    title: '修繕管理系統',
+    category: '工單管理系統',
+    year: '2024',
+    description:
+      '建立報修工單流程，導入承辦與技工角色權限、進度追蹤、歷程紀錄，並提供財務報表匯出功能。',
+    tech: ['C#', 'ASP.NET Core MVC', '工單流程', '權限控管', '報表匯出'],
+    github: null,
+    demo: null,
+  },
+  {
+    title: '虛擬書架系統',
+    category: '內容管理系統',
     year: '2025',
     description:
-      '這個專案聚焦在資料流與生命週期管理，設計方向偏向可維護、可重複執行，適合真實工作流程中的自動化需求。',
-    tech: ['C#', '.NET', '背景工作', '資料處理'],
-    github: 'https://github.com/Andy61490963/DataLifecycleManager',
-    demo: null,
-  },
-  {
-    title: '檔案鏡像同步工具',
-    category: '開發工具',
-    year: '2025',
-    description:
-      '這是一個輕量級工具，目的是穩定同步檔案內容，也反映出我對日常流程問題與實用型工程工具的興趣。',
-    tech: ['C#', '檔案處理', '自動化', '工具開發'],
-    github: 'https://github.com/Andy61490963/FileMirrorSync',
-    demo: null,
-  },
-  {
-    title: 'RV Shell',
-    category: '實驗專案',
-    year: '2023',
-    description:
-      '這是比較早期的 shell 相關實驗，呈現我對較底層工具、命令列操作，以及非典型 CRUD 專案的好奇心。',
-    tech: ['系統工具', 'CLI', '實驗性開發'],
-    github: 'https://github.com/Andy61490963/rvshell',
+      '建立個人書櫃與書籍收藏功能，支援多層分類與批次操作，讓內容整理與管理更有效率。',
+    tech: ['C#', 'ASP.NET Core MVC', '內容管理', '分類設計'],
+    github: null,
     demo: null,
   },
 ]

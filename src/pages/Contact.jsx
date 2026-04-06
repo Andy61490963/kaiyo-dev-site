@@ -1,9 +1,21 @@
 ﻿import React from 'react'
-import { Github, MapPin, Rocket, UserRound } from 'lucide-react'
+import { Github, Mail, MapPin, Phone, UserRound } from 'lucide-react'
 import SectionContainer from '../components/SectionContainer.jsx'
 import { contact } from '../data/contact.js'
 
 const cards = [
+  {
+    icon: Mail,
+    label: 'Email',
+    value: contact.email,
+    href: `mailto:${contact.email}`,
+  },
+  {
+    icon: Phone,
+    label: '電話',
+    value: contact.phone,
+    href: null,
+  },
   {
     icon: Github,
     label: 'GitHub',
@@ -22,25 +34,19 @@ const cards = [
     value: contact.title,
     href: null,
   },
-  {
-    icon: Rocket,
-    label: '合作方向',
-    value: '願意接觸合作開發與新的產品想法',
-    href: null,
-  },
 ]
 
 export default function Contact() {
   return (
     <>
-      <SectionContainer subtitle="聯絡我" title="你可以在哪裡找到我，以及我願意投入的方向">
+      <SectionContainer subtitle="聯絡我" title="我的聯絡方式與目前職涯方向">
         <div className="max-w-3xl space-y-4 text-base leading-8 text-zinc-300">
           <p>{contact.intro}</p>
           <p>{contact.availability}</p>
         </div>
       </SectionContainer>
 
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
         {cards.map((item) => {
           const content = (
             <div className="glass-card h-full">

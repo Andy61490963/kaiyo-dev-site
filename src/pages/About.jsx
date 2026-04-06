@@ -5,48 +5,48 @@ import SectionContainer from '../components/SectionContainer.jsx'
 const strengths = [
   {
     icon: Layers3,
-    title: '重視整體結構的實作方式',
-    text: '我會先理解系統中各個部分如何互相配合，這樣寫出來的程式不只現在能用，也比較容易在專案變大後持續維護。',
+    title: '具備完整系統開發流程經驗',
+    text: '從需求訪談、流程分析、系統設計到後期維護，我都具備實務經驗，也能獨立完成專案開發工作。',
   },
   {
     icon: Briefcase,
-    title: '以流程問題為出發點',
-    text: '我很常從真實工作流程出發思考需求，而不是只做看起來漂亮、但其實沒有減少摩擦成本的功能。',
+    title: '擅長流程型系統建置',
+    text: '我參與過車證、校安、新生健檢、修繕管理等系統，熟悉從實際作業流程抽出需求並轉成系統設計。',
   },
   {
     icon: BookOpenText,
-    title: '把學習與成長公開整理',
-    text: '公開 repo 和建立這個網站，對我來說都是同一件事的一部分：把自己的進步變得可見、可回顧，也更容易持續優化。',
+    title: '持續優化系統品質',
+    text: '我曾處理高併發、Deadlock、模組化重構等問題，也會透過設計模式、責任分離與 Log 機制提升系統可維護性。',
   },
 ]
 
 const skills = [
-  'C# 與服務型後端開發',
-  '.NET API 設計與資料流程處理',
-  'React、Vite、Tailwind CSS 前端實作',
-  '內部工具與流程型系統開發',
-  '自動化工具與實用型軟體設計',
-  '透過公開 repo 累積作品與成長紀錄',
+  'C# / ASP.NET Core MVC',
+  'Python / Django',
+  'JavaScript',
+  'MS SQL / IIS / Linux',
+  'Git / AWS / EC2',
+  'Nginx / Gunicorn / ELB / TLS',
 ]
 
 export default function About() {
   return (
     <>
-      <SectionContainer subtitle="關於我" title="專注於實用軟體與持續成長的開發者">
+      <SectionContainer subtitle="關於我" title="專注於後端開發、流程系統與系統整合的工程師">
         <div className="max-w-4xl space-y-5 text-base leading-8 text-zinc-300">
           <p>
-            我希望把這個作品集慢慢整理成代表自己的樣子，也就是那些真正有用途、能穩定運作，並且建立在真實問題上的軟體作品。GitHub 上已經有一些這樣的內容，而這個網站讓它們有了更清楚的呈現方式。
+            我是許愷佑，英文名 Andy，畢業於國立臺東大學資訊工程學系。目前在威友科技擔任後端工程師，持續投入系統開發、MES 流程導入與異質系統整合工作。
           </p>
           <p>
-            我特別容易被那些介於產品與實務流程之間的專案吸引。我喜歡處理後端架構、資料流，以及能幫助團隊更順利完成工作的網站介面。
+            在此之前，我曾於國立臺東大學系統發展組參與校務與行政系統開發，負責需求分析、流程設計、系統實作與自動化解決方案。這段經歷讓我累積了不少流程型系統與實際使用者需求的開發經驗。
           </p>
           <p>
-            現在這個網站還是第一版，但這是我刻意的選擇。我更喜歡先做出一個真實可用的版本，再隨著作品與方向變得更清楚，一步一步把它打磨完整。
+            我特別重視實用性與可維護性，除了能快速完成系統功能，也會關注資料流、權限管理、效能問題，以及系統長期擴充與重構的可能性。
           </p>
         </div>
       </SectionContainer>
 
-      <SectionContainer subtitle="優勢" title="我通常怎麼思考與處理工程問題">
+      <SectionContainer subtitle="優勢" title="我目前最有代表性的能力與工作方式">
         <div className="grid gap-5 md:grid-cols-3">
           {strengths.map((item) => (
             <article key={item.title} className="glass-card">
@@ -62,7 +62,7 @@ export default function About() {
         </div>
       </SectionContainer>
 
-      <SectionContainer subtitle="技術方向" title="目前作品中比較常出現的工具與主題">
+      <SectionContainer subtitle="技術能力" title="履歷中主要使用的技術與系統工具">
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill) => (
             <li key={skill} className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4 text-sm leading-7 text-zinc-200">
