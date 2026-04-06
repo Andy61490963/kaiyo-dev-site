@@ -31,7 +31,7 @@ const stats = [
 
 export default function Home() {
   const featuredMilestones = certifications.slice(0, 3)
-  const profileImage = '/5B609B4A-6DFD-4FE8-8C64-0F5BC0B996F1.jpg'
+  const profileImage = `${import.meta.env.BASE_URL}5B609B4A-6DFD-4FE8-8C64-0F5BC0B996F1.jpg`
 
   return (
     <section className="space-y-16 sm:space-y-20">
