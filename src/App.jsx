@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Home from './pages/Home.jsx'
@@ -9,9 +9,20 @@ import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 import Articles from './pages/Articles.jsx'
 
+function ScrollToTop() {
+  const location = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [location.pathname])
+
+  return null
+}
+
 export default function App() {
   return (
     <div className="relative min-h-screen overflow-x-hidden font-sans text-slate-900 selection:bg-slate-900 selection:text-white">
+      <ScrollToTop />
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
         <motion.div
           animate={{ x: [0, 20, 0], y: [0, -18, 0] }}
