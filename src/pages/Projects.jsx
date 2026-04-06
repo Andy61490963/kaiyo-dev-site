@@ -10,6 +10,7 @@ export default function Projects() {
         <div className="max-w-4xl space-y-4 text-base leading-8 text-slate-600">
           <p>
             這一頁整理的是我實際參與開發與落地的專案，重點不是展示功能數量，而是每個系統解決了哪些流程、資料與管理問題
+            <br />
             專案多半涉及申請審核、角色權限、附件管理、通知機制、與資料整合，也最能代表我目前在流程型系統開發上的能力
           </p>
           <p>
