@@ -8,7 +8,6 @@ const navItems = [
   { to: '/about', label: '關於我' },
   { to: '/projects', label: '作品集' },
   { to: '/notes', label: '筆記' },
-  { to: '/milestones', label: '里程碑' },
   { to: '/contact', label: '聯絡我' },
 ]
 
