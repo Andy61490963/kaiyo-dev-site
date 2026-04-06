@@ -6,7 +6,7 @@ import { projects } from '../data/projects.js'
 export default function Projects() {
   return (
     <>
-      <SectionContainer subtitle="作品集" title="代表性的流程系統與開發專案">
+      <SectionContainer subtitle="作品集" title="專案列表">
         <div className="max-w-4xl space-y-4 text-base leading-8 text-slate-600">
           <p>
             這一頁整理的是我實際參與開發與落地的專案，重點不是展示功能數量，而是每個系統解決了哪些流程、資料與管理問題
