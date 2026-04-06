@@ -6,13 +6,13 @@ import { projects } from '../data/projects.js'
 export default function Projects() {
   return (
     <>
-      <SectionContainer subtitle="作品集" title="根據履歷整理的代表性系統開發專案">
+      <SectionContainer subtitle="作品集" title="代表性的流程系統與後端開發專案">
         <div className="max-w-4xl space-y-4 text-base leading-8 text-slate-600">
           <p>
-            這一頁整理的是我履歷中的核心專案經驗，重點放在實際有參與開發、規劃或整合的系統，而不是單純展示練習作品。
+            這一頁整理的是我實際參與開發與落地的專案，重點不是展示功能數量，而是每個系統解決了哪些流程、資料與管理問題。
           </p>
           <p>
-            這些專案多半與校務行政流程、工單流程、資料整合與角色權限管理有關，也最能代表我目前在後端開發與流程系統建置上的能力。
+            專案多半涉及申請審核、角色權限、附件管理、通知機制、報表輸出與資料整合，也最能代表我目前在流程型系統開發上的能力。
           </p>
         </div>
       </SectionContainer>

@@ -6,13 +6,13 @@ import { articles } from '../data/articles.js'
 export default function Articles() {
   return (
     <>
-      <SectionContainer subtitle="筆記" title="整理我目前開發方向與想法的幾個主題">
+      <SectionContainer subtitle="筆記" title="我目前關注的開發主題與實務重點">
         <div className="max-w-4xl space-y-4 text-base leading-8 text-slate-600">
           <p>
-            我把這一區當成比較輕量的想法整理區，讓這個網站不只是放連結而已，也能慢慢把我在開發上重視的主題記錄下來。
+            這一區整理的是我目前最常碰到、也最重視的幾類主題，包含流程型系統、資料一致性、整合開發與系統維護。
           </p>
           <p>
-            之後我也可以把這些內容擴充成真正的文章，像是技術選擇、專案心得，或是我怎麼思考一個值得信任的產品該如何被打造出來。
+            之後會逐步擴充成更完整的案例或技術文章，讓這些經驗不只停留在履歷描述，而是能更清楚呈現思考方式與解法。
           </p>
         </div>
       </SectionContainer>

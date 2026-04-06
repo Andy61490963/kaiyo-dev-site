@@ -39,7 +39,7 @@ const cards = [
 export default function Contact() {
   return (
     <>
-      <SectionContainer subtitle="聯絡我" title="我的聯絡方式與目前職涯方向">
+      <SectionContainer subtitle="聯絡我" title="聯絡方式與目前工作方向">
         <div className="max-w-3xl space-y-4 text-base leading-8 text-slate-600">
           <p>{contact.intro}</p>
           <p>{contact.availability}</p>

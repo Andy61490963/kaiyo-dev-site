@@ -5,18 +5,18 @@ import SectionContainer from '../components/SectionContainer.jsx'
 const strengths = [
   {
     icon: Layers3,
-    title: '具備完整系統開發流程經驗',
-    text: '從需求訪談、流程分析、系統設計到後期維護，我都具備實務經驗，也能獨立完成專案開發工作。',
+    title: '從需求到上線能獨立推進',
+    text: '涵蓋需求分析、流程設計、後端實作到維護，能把流程型系統從想法推進到可實際使用。',
   },
   {
     icon: Briefcase,
-    title: '擅長流程型系統建置',
-    text: '我參與過車證、校安、新生健檢、修繕管理等系統，熟悉從實際作業流程抽出需求並轉成系統設計。',
+    title: '擅長把流程整理成系統',
+    text: '做過車證、校安、健檢與修繕等系統，熟悉把多角色、多狀態、多資料流的流程落成可維護的功能。',
   },
   {
     icon: BookOpenText,
-    title: '持續優化系統品質',
-    text: '我曾處理高併發、Deadlock、模組化重構等問題，也會透過設計模式、責任分離與 Log 機制提升系統可維護性。',
+    title: '優先處理穩定性與維護成本',
+    text: '曾處理高併發、Deadlock、編號衝突與重構議題，透過交易控制、模組化與 Log 機制提升系統品質。',
   },
 ]
 
@@ -32,21 +32,21 @@ const skills = [
 export default function About() {
   return (
     <>
-      <SectionContainer subtitle="關於我" title="專注於後端開發、流程系統與系統整合的工程師">
+      <SectionContainer subtitle="關於我" title="專注流程型系統開發與整合的後端工程師">
         <div className="max-w-4xl space-y-5 text-base leading-8 text-slate-600">
           <p>
-            我是許愷佑，英文名 Andy，畢業於國立臺東大學資訊工程學系。目前在威友科技擔任後端工程師，持續投入系統開發、MES 流程導入與異質系統整合工作。
+            我是許愷佑 Andy，現職後端工程師，具備 2 年系統開發與異質系統整合實務經驗。工作內容以流程型系統為主，包含需求分析、後端開發、資料流規劃與上線後維護。
           </p>
           <p>
-            在此之前，我曾於國立臺東大學系統發展組參與校務與行政系統開發，負責需求分析、流程設計、系統實作與自動化解決方案。這段經歷讓我累積了不少流程型系統與實際使用者需求的開發經驗。
+            我曾參與校務、行政與 MES 相關系統開發，做過車證申請、校安通報、新生健檢、修繕管理與虛擬書架等專案。這些經驗讓我熟悉如何將實際作業流程整理成可追蹤、可維護的系統設計。
           </p>
           <p>
-            我特別重視實用性與可維護性，除了能快速完成系統功能，也會關注資料流、權限管理、效能問題，以及系統長期擴充與重構的可能性。
+            我在意的不只是哪個功能能不能做出來，也包含資料一致性、角色權限、效能瓶頸，以及系統未來擴充與維護的成本。
           </p>
         </div>
       </SectionContainer>
 
-      <SectionContainer subtitle="優勢" title="我目前最有代表性的能力與工作方式">
+      <SectionContainer subtitle="優勢" title="目前最有代表性的能力與工作方式">
         <div className="grid gap-5 md:grid-cols-3">
           {strengths.map((item) => (
             <article key={item.title} className="glass-card">
@@ -62,7 +62,7 @@ export default function About() {
         </div>
       </SectionContainer>
 
-      <SectionContainer subtitle="技術能力" title="履歷中主要使用的技術與系統工具">
+      <SectionContainer subtitle="技術能力" title="主要使用的技術與系統工具">
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill) => (
             <li key={skill} className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-4 text-sm leading-7 text-slate-700">

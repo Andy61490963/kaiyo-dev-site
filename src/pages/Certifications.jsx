@@ -9,13 +9,13 @@ export default function Certifications() {
 
   return (
     <>
-      <SectionContainer subtitle="里程碑" title="目前最能代表我方向的能力與成長主題">
+      <SectionContainer subtitle="里程碑" title="目前最能代表我能力累積的幾個階段">
         <div className="max-w-4xl space-y-4 text-base leading-8 text-slate-600">
           <p>
-            這一頁不是傳統的證照頁，而是整理目前最能代表我方向的主題，像是持續交付實用軟體、累積後端能力，以及建立更完整的公開作品形象。
+            這一頁不是傳統證照列表，而是整理我目前能力累積最有代表性的幾個階段，包含學歷、系統開發經驗與實際落地成果。
           </p>
           <p>
-            這一區比較像是我現在與未來之間的橋樑，讓這個網站不只呈現當下，也能留下後續可以延伸成完整案例的空間。
+            這些內容對我來說不只是履歷節點，也代表我目前在哪些領域累積了可延伸成更完整案例的實務基礎。
           </p>
         </div>
       </SectionContainer>
@@ -55,9 +55,9 @@ export default function Certifications() {
           <div className="glass-card">
             <div className="glass-card__inner">
               <p className="mono text-xs uppercase tracking-[0.22em] text-slate-500">現在</p>
-              <h2 className="text-xl font-semibold text-slate-900">這一版網站正在做的事</h2>
+              <h2 className="text-xl font-semibold text-slate-900">這一版網站的定位</h2>
               <p className="text-sm leading-7 text-slate-600">
-                這個作品集目前刻意維持簡潔，先把 GitHub 上的作品整理成更有呈現感的網站，建立之後可以持續擴充的基礎。
+                這個網站目前先聚焦在清楚呈現我的技術背景、代表專案與問題解決能力，讓面試官能快速理解我的工作價值。
               </p>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function Certifications() {
           <div className="glass-card">
             <div className="glass-card__inner">
               <p className="mono text-xs uppercase tracking-[0.22em] text-slate-500">下一步</p>
-              <h2 className="text-xl font-semibold text-slate-900">後續可以再補上的內容</h2>
+              <h2 className="text-xl font-semibold text-slate-900">後續持續補強的方向</h2>
               <ul className="space-y-3">
                 {secondaryMilestones.map((item) => (
                   <li key={item.title} className="rounded-2xl border border-slate-200 bg-slate-50/80 p-4">
