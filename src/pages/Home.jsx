@@ -55,7 +55,7 @@ export default function Home() {
             </h1>
 
             <p className="max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
-              具備 3 年系統開發實務經驗，把複雜流程整理成可落地的系統
+              具備三年系統開發實務經驗，把複雜流程整理成可落地的系統
             </p>
           </div>
 
