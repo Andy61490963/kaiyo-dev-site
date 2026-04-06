@@ -412,3 +412,45 @@ button {
     top: auto;
   }
 }
+.theme-toggle-button {
+  position: relative;
+}
+
+.theme-toggle-tooltip {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.6rem);
+  transform: translateY(-4px);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(203, 213, 225, 0.9);
+  background: rgba(255, 255, 255, 0.96);
+  padding: 0.45rem 0.7rem;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: #334155;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.theme-toggle-button:hover .theme-toggle-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer-subtitle {
+  color: #64748b;
+}
+
+:root.theme-dark .footer-subtitle {
+  color: #cbd5e1;
+}
+
+:root.theme-dark .theme-toggle-tooltip {
+  border-color: rgba(51, 65, 85, 0.95);
+  background: rgba(15, 23, 42, 0.96);
+  color: #e2e8f0;
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.34);
+}

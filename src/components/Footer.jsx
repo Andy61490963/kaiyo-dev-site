@@ -26,7 +26,7 @@ export default function Footer() {
               <Terminal className="h-4 w-4 text-slate-500" />
               Andy 個人作品集
             </div>
-            <div>後端開發 / 系統整合 / 流程型系統設計</div>
+            <div className="footer-subtitle">後端開發 / 系統整合 / 流程型系統設計</div>
           </div>
 
           <ul className="flex flex-wrap gap-3 text-slate-600">

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import clsx from 'classnames'
 import { motion } from 'framer-motion'
-import { Code2, Menu, MoonStar, Sparkles, SunMedium, X } from 'lucide-react'
+import { Code2, Menu, MoonStar, SunMedium, X } from 'lucide-react'
 import { NavLink, useLocation } from 'react-router-dom'
 
 const navItems = [
@@ -16,6 +16,7 @@ export default function Navbar({ isDarkMode, onToggleTheme }) {
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
+  const themeLabel = isDarkMode ? '切換為淺色模式' : '切換為深色模式'
 
   useEffect(() => {
     setIsMobileOpen(false)
@@ -60,20 +61,53 @@ export default function Navbar({ isDarkMode, onToggleTheme }) {
             </span>
           </NavLink>
 
-          <div className="flex items-center gap-2 sm:gap-3">
-            <button
-              type="button"
-              onClick={onToggleTheme}
-              className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/80 p-2.5 text-slate-700 transition hover:bg-white"
-              aria-label={isDarkMode ? '切換為淺色模式' : '切換為深色模式'}
-              title={isDarkMode ? '切換為淺色模式' : '切換為深色模式'}
-            >
-              {isDarkMode ? <SunMedium className="h-4.5 w-4.5" /> : <MoonStar className="h-4.5 w-4.5" />}
-            </button>
+          <div className="hidden items-center gap-1 text-sm font-medium lg:flex">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className={({ isActive }) =>
+                  clsx(
+                    'mono inline-flex rounded-full px-3 py-2 transition duration-200 xl:px-4',
+                    isActive
+                      ? 'bg-slate-900 text-white shadow-[0_10px_24px_rgba(15,23,42,0.12)]'
+                      : 'text-slate-600 hover:bg-white hover:text-slate-900'
+                  )
+                }
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-2">
+            <div className="relative hidden lg:block">
+              <button
+                type="button"
+                onClick={onToggleTheme}
+                className="theme-toggle-button group inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/80 p-2 text-slate-700 transition hover:bg-white"
+                aria-label={themeLabel}
+              >
+                {isDarkMode ? <SunMedium className="h-4 w-4" /> : <MoonStar className="h-4 w-4" />}
+                <span className="theme-toggle-tooltip">{themeLabel}</span>
+              </button>
+            </div>
+
+            <div className="relative lg:hidden">
+              <button
+                type="button"
+                onClick={onToggleTheme}
+                className="theme-toggle-button inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/80 p-2 text-slate-700 transition hover:bg-white"
+                aria-label={themeLabel}
+                title={themeLabel}
+              >
+                {isDarkMode ? <SunMedium className="h-4 w-4" /> : <MoonStar className="h-4 w-4" />}
+              </button>
+            </div>
 
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/80 p-2 text-slate-700 transition hover:bg-white sm:hidden"
+              className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/80 p-2 text-slate-700 transition hover:bg-white lg:hidden"
               onClick={() => setIsMobileOpen((prev) => !prev)}
               aria-label="切換選單"
               aria-expanded={isMobileOpen}
@@ -81,33 +115,6 @@ export default function Navbar({ isDarkMode, onToggleTheme }) {
             >
               {isMobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
-          </div>
-
-          <div className="hidden items-center gap-3 lg:flex">
-            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-white/65 px-3 py-2 text-[0.72rem] text-slate-500">
-              <Sparkles className="h-3.5 w-3.5" />
-              <span className="mono uppercase tracking-[0.18em]">Open To Build</span>
-            </div>
-
-            <ul className="flex items-center gap-1 text-sm font-medium">
-              {navItems.map((item) => (
-                <li key={item.to}>
-                  <NavLink
-                    to={item.to}
-                    className={({ isActive }) =>
-                      clsx(
-                        'mono inline-flex rounded-full px-3 py-2 transition duration-200 xl:px-4',
-                        isActive
-                          ? 'bg-slate-900 text-white shadow-[0_10px_24px_rgba(15,23,42,0.12)]'
-                          : 'text-slate-600 hover:bg-white hover:text-slate-900'
-                      )
-                    }
-                  >
-                    {item.label}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
 
