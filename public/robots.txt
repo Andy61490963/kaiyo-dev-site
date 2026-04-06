@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eric-s-dev-site.kuanlin.pro/sitemap.xml
