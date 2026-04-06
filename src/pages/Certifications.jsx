@@ -9,7 +9,7 @@ export default function Certifications() {
 
   return (
     <>
-      <SectionContainer subtitle="里程碑" title="目前最能代表我能力累積的幾個階段">
+      <SectionContainer subtitle="里程碑" title="最能代表我能力累積的幾個階段">
         <div className="max-w-4xl space-y-4 text-base leading-8 text-slate-600">
           <p>
             這一頁不是傳統證照列表，而是整理我目前能力累積最有代表性的幾個階段，包含學歷、系統開發經驗與實際落地成果。

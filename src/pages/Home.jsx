@@ -50,12 +50,12 @@ export default function Home() {
             <h1 className="section-title max-w-4xl">
               Andy
               <span className="mt-3 block text-slate-500">
-                系統開發與異質系統整合工程師
+                系統開發異質系統整合工程師
               </span>
             </h1>
 
             <p className="max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
-              具備 2 年系統開發實務經驗，把複雜流程整理成可落地的系統
+              具備 3 年系統開發實務經驗，把複雜流程整理成可落地的系統
             </p>
           </div>
 
@@ -121,10 +121,10 @@ export default function Home() {
               <Rocket className="h-4 w-4" />
               <span className="mono text-[0.72rem] uppercase tracking-[0.22em]">履歷重點</span>
             </div>
-            <h2 className="text-2xl font-semibold text-slate-900">複雜場景的解決方案</h2>
-            <p className="text-sm leading-7 text-slate-600">
+            <h2 className="text-2xl font-semibold text-slate-900">提供複雜場景的解決方案</h2>
+            {/* <p className="text-sm leading-7 text-slate-600">
               不走一般作品集的路線，而是把專案的問題拆分，解釋解決了什麼問題
-            </p>
+            </p> */}
 
             <ul className="space-y-3">
               {featuredMilestones.map((item) => (
