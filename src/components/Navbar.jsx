@@ -4,12 +4,12 @@ import { Code2, Menu, TerminalSquare, X } from 'lucide-react'
 import { NavLink, useLocation } from 'react-router-dom'
 
 const navItems = [
-  { to: '/', label: 'Home' },
-  { to: '/about', label: 'About' },
-  { to: '/projects', label: 'Projects' },
-  { to: '/notes', label: 'Notes' },
-  { to: '/milestones', label: 'Milestones' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/', label: '首頁' },
+  { to: '/about', label: '關於我' },
+  { to: '/projects', label: '作品集' },
+  { to: '/notes', label: '筆記' },
+  { to: '/milestones', label: '里程碑' },
+  { to: '/contact', label: '聯絡我' },
 ]
 
 export default function Navbar() {
@@ -30,10 +30,10 @@ export default function Navbar() {
             </span>
             <span className="min-w-0">
               <span className="mono block text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#8af7fe]">
-                Andy / Kaiyo Dev Site
+                Andy / 個人作品網站
               </span>
               <span className="block truncate text-sm font-semibold text-zinc-100 sm:text-base">
-                Full-stack builder / internal tools / web apps
+                全端開發 / 內部工具 / 網站應用
               </span>
             </span>
           </NavLink>
@@ -42,7 +42,7 @@ export default function Navbar() {
             type="button"
             className="inline-flex items-center justify-center rounded-full border border-[#39ff1429] bg-[#39ff140d] p-2 text-[#b8ffb8] transition hover:bg-[#39ff1416] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#39ff14] sm:hidden"
             onClick={() => setIsMobileOpen((prev) => !prev)}
-            aria-label="Toggle navigation"
+            aria-label="切換導覽選單"
             aria-expanded={isMobileOpen}
             aria-controls="primary-navigation"
           >
@@ -72,7 +72,7 @@ export default function Navbar() {
 
         <div className="mt-3 hidden items-center gap-2 border-t border-[#39ff1416] pt-3 text-[0.72rem] text-zinc-400 lg:flex">
           <TerminalSquare className="h-4 w-4 text-[#39ff14]" />
-          <span className="mono">status: building / role: software developer / mode: personal portfolio</span>
+          <span className="mono">狀態：持續更新中 / 角色：軟體開發者 / 模式：個人作品集</span>
         </div>
 
         <ul

@@ -3,15 +3,15 @@ import { ExternalLink, Terminal } from 'lucide-react'
 
 const footerLinks = [
   {
-    label: 'GitHub Profile',
+    label: 'GitHub 個人頁',
     href: 'https://github.com/Andy61490963',
   },
   {
-    label: 'Portfolio Repo',
+    label: '作品集原始碼',
     href: 'https://github.com/Andy61490963/kaiyo-dev-site',
   },
   {
-    label: 'Reference Inspiration',
+    label: '參考專案',
     href: 'https://github.com/and910805/eric-s-dev-site',
   },
 ]
@@ -23,9 +23,9 @@ export default function Footer() {
         <div className="space-y-1">
           <div className="mono flex items-center gap-2 text-zinc-100">
             <Terminal className="h-4 w-4 text-[#39ff14]" />
-            Andy Kaiyo Portfolio
+            Andy 個人作品集
           </div>
-          <div>portfolio / projects / notes / milestones</div>
+          <div>作品集 / 專案整理 / 筆記想法 / 成長紀錄</div>
         </div>
 
         <ul className="flex flex-wrap gap-3 text-zinc-300">

@@ -48,7 +48,7 @@ export default function ProjectCard({ project }) {
               className="inline-flex items-center gap-2 rounded-full bg-cyan-300 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
             >
               <Github className="h-4 w-4" />
-              GitHub
+              原始碼
             </a>
           )}
           {project.demo && (
@@ -59,7 +59,7 @@ export default function ProjectCard({ project }) {
               className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               <ExternalLink className="h-4 w-4" />
-              Live
+              線上展示
             </a>
           )}
         </div>

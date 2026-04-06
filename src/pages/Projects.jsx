@@ -6,15 +6,13 @@ import { projects } from '../data/projects.js'
 export default function Projects() {
   return (
     <>
-      <SectionContainer subtitle="Projects" title="Selected work pulled from my public GitHub footprint">
+      <SectionContainer subtitle="作品集" title="從公開 GitHub 專案整理出的代表性作品">
         <div className="max-w-4xl space-y-4 text-base leading-8 text-zinc-300">
           <p>
-            This first version of the portfolio uses my existing public repositories as the source material. It is a
-            practical way to start with real work, then gradually expand each project into clearer case studies.
+            目前這一版作品集，是以我現有的公開 GitHub repo 為基礎整理而成。這樣做的好處是可以先從真實作品出發，之後再逐步補強成更完整的專案案例介紹。
           </p>
           <p>
-            Some descriptions are intentionally high-level because this site is an introduction page first. As I keep
-            iterating, I can add architecture notes, screenshots, and deeper breakdowns for each project.
+            現在有些描述還是偏高層次，因為這個網站目前主要定位仍然是自我介紹。後續我還可以再補上架構說明、畫面截圖，以及每個專案更深入的內容拆解。
           </p>
         </div>
       </SectionContainer>

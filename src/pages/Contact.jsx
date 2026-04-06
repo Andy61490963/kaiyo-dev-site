@@ -12,20 +12,20 @@ const cards = [
   },
   {
     icon: MapPin,
-    label: 'Location',
+    label: '地點',
     value: contact.location,
     href: null,
   },
   {
     icon: UserRound,
-    label: 'Role',
+    label: '角色定位',
     value: contact.title,
     href: null,
   },
   {
     icon: Rocket,
-    label: 'Availability',
-    value: 'Open to collaboration and new product ideas',
+    label: '合作方向',
+    value: '願意接觸合作開發與新的產品想法',
     href: null,
   },
 ]
@@ -33,7 +33,7 @@ const cards = [
 export default function Contact() {
   return (
     <>
-      <SectionContainer subtitle="Contact" title="Where to find me and what I am open to building">
+      <SectionContainer subtitle="聯絡我" title="你可以在哪裡找到我，以及我願意投入的方向">
         <div className="max-w-3xl space-y-4 text-base leading-8 text-zinc-300">
           <p>{contact.intro}</p>
           <p>{contact.availability}</p>

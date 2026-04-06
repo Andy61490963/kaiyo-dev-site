@@ -6,15 +6,13 @@ import { articles } from '../data/articles.js'
 export default function Articles() {
   return (
     <>
-      <SectionContainer subtitle="Notes" title="A few ideas that define where I want this portfolio to go next">
+      <SectionContainer subtitle="筆記" title="整理我目前開發方向與想法的幾個主題">
         <div className="max-w-4xl space-y-4 text-base leading-8 text-zinc-300">
           <p>
-            I am using this section like a lightweight notes shelf. It collects the themes behind my work so the site
-            feels more personal than a list of links, even while it is still early.
+            我把這一區當成比較輕量的想法整理區，讓這個網站不只是放連結而已，也能慢慢把我在開發上重視的主題記錄下來。
           </p>
           <p>
-            Over time, I can turn these into real write-ups about engineering choices, project lessons, and the way I
-            think about building software that earns trust from users and teams.
+            之後我也可以把這些內容擴充成真正的文章，像是技術選擇、專案心得，或是我怎麼思考一個值得信任的產品該如何被打造出來。
           </p>
         </div>
       </SectionContainer>
@@ -31,7 +29,7 @@ export default function Articles() {
                   <h2 className="mt-2 text-xl font-semibold text-white">{article.title}</h2>
                 </div>
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#39ff1430] bg-[#39ff1410] text-[#7dff8f]">
-                  {article.platform === 'Portfolio' ? (
+                  {article.platform === '作品集' ? (
                     <Rocket className="h-4 w-4" />
                   ) : (
                     <FileText className="h-4 w-4" />
@@ -51,7 +49,7 @@ export default function Articles() {
                 rel="noopener noreferrer"
                 className="terminal-button terminal-button--ghost mt-auto w-fit"
               >
-                open link
+                開啟連結
                 <ExternalLink className="h-4 w-4" />
               </a>
             </div>

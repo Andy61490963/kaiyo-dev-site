@@ -8,25 +8,25 @@ import { certifications } from '../data/certifications.js'
 const coreAreas = [
   {
     icon: Workflow,
-    title: 'Internal tools that solve real work',
-    text: 'I enjoy building software that takes a repetitive process and turns it into something cleaner, faster, and easier for people to trust.',
+    title: '打造能解決真實流程問題的工具',
+    text: '我喜歡把重複、繁瑣的工作流程整理成更乾淨、更有效率，也更容易讓人信任的軟體工具。',
   },
   {
     icon: Rocket,
-    title: 'Steady shipping over perfect planning',
-    text: 'My preference is to get working versions into the open, learn from them quickly, and keep improving based on what the product actually needs.',
+    title: '先做出來，再持續優化',
+    text: '比起花很多時間停留在規劃，我更傾向先做出能運作的版本，再根據真正的需求持續調整與改進。',
   },
   {
     icon: Radar,
-    title: 'Full-stack thinking',
-    text: 'I care about backend structure, operational reliability, and interface quality together because strong products usually need all three working in sync.',
+    title: '全端視角思考產品',
+    text: '我在意後端結構、系統穩定性與介面品質，因為一個好的產品通常需要這三者一起配合。',
   },
 ]
 
 const stats = [
-  { value: '5+', label: 'Public repos', detail: 'Projects that show different slices of my work' },
-  { value: '3', label: 'Core themes', detail: 'API, automation, and product-facing web delivery' },
-  { value: '2026', label: 'Current focus', detail: 'Turning experiments into a polished public portfolio' },
+  { value: '5+', label: '公開專案', detail: '目前已經整理出的公開作品數量' },
+  { value: '3', label: '核心方向', detail: 'API、自動化、面向產品的網站開發' },
+  { value: '2026', label: '目前目標', detail: '把零散作品整理成更完整的個人作品集' },
 ]
 
 export default function Home() {
@@ -43,42 +43,41 @@ export default function Home() {
         >
           <div className="terminal-label">
             <span className="terminal-dot" />
-            portfolio / active build
+            作品集 / 持續更新中
           </div>
 
           <div className="space-y-5">
             <h1 className="section-title max-w-4xl">
               Andy
               <span className="mt-3 block bg-[linear-gradient(90deg,#39ff14_0%,#3df2ff_55%,#effff5_100%)] bg-clip-text text-transparent">
-                Building practical software with a product mindset
+                用產品思維打造實用的軟體與網站
               </span>
             </h1>
 
             <p className="max-w-3xl text-base leading-8 text-zinc-300 sm:text-lg">
-              This site is the start of my public developer presence. I am using it to collect the projects,
-              ideas, and working style that best represent how I build software and where I want to grow next.
+              這個網站是我建立個人開發者形象的起點。我希望把自己的專案、想法，以及做軟體的方式整理在這裡，慢慢累積成更完整的作品集。
             </p>
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <Link to="/projects" className="terminal-button terminal-button--primary">
-              explore projects
+              查看作品
               <ArrowRight className="h-4 w-4" />
             </Link>
 
             <Link to="/about" className="terminal-button terminal-button--ghost">
-              read about me
+              認識我
             </Link>
           </div>
 
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="terminal-outline rounded-2xl px-4 py-3">
-              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-[#88f8d4]">focus</div>
+              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-[#88f8d4]">定位</div>
               <div className="mt-2 text-sm text-zinc-100">{contact.title}</div>
             </div>
 
             <div className="terminal-outline rounded-2xl px-4 py-3">
-              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-[#88f8d4]">github</div>
+              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-[#88f8d4]">GitHub</div>
               <a
                 href={`https://github.com/${contact.githubUsername}`}
                 target="_blank"
@@ -101,12 +100,11 @@ export default function Home() {
           <div className="glass-card__inner">
             <div className="flex items-center gap-2 text-[#7df48d]">
               <Rocket className="h-4 w-4" />
-              <span className="mono text-[0.72rem] uppercase tracking-[0.22em]">current direction</span>
+              <span className="mono text-[0.72rem] uppercase tracking-[0.22em]">目前方向</span>
             </div>
-            <h2 className="text-2xl font-semibold text-white">From working repos to a sharper developer identity</h2>
+            <h2 className="text-2xl font-semibold text-white">把零散的 repo 整理成更清楚的開發者形象</h2>
             <p className="text-sm leading-7 text-zinc-300">
-              I already have public work on GitHub. This portfolio turns those scattered repos into a story that
-              explains what I build, what I care about, and how I can contribute.
+              我已經有一些公開作品放在 GitHub 上，而這個網站的目的，就是把那些分散的內容整理成更有脈絡的故事，讓人更容易理解我會做什麼、重視什麼，以及我能怎麼貢獻。
             </p>
 
             <ul className="space-y-3">

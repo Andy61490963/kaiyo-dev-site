@@ -9,14 +9,13 @@ export default function Certifications() {
 
   return (
     <>
-      <SectionContainer subtitle="Milestones" title="Signals that describe the direction of my work">
+      <SectionContainer subtitle="里程碑" title="目前最能代表我方向的能力與成長主題">
         <div className="max-w-4xl space-y-4 text-base leading-8 text-zinc-300">
           <p>
-            Instead of formal certificates, this page highlights the themes and milestones that feel most representative
-            of my current path: shipping useful software, improving backend structure, and building a stronger public presence.
+            這一頁不是傳統的證照頁，而是整理目前最能代表我方向的主題，像是持續交付實用軟體、累積後端能力，以及建立更完整的公開作品形象。
           </p>
           <p>
-            It works as a bridge between who I am now and the fuller set of case studies I want this portfolio to contain later.
+            這一區比較像是我現在與未來之間的橋樑，讓這個網站不只呈現當下，也能留下後續可以延伸成完整案例的空間。
           </p>
         </div>
       </SectionContainer>
@@ -45,7 +44,7 @@ export default function Certifications() {
                   className="terminal-button terminal-button--primary w-fit"
                 >
                   <ExternalLink className="h-4 w-4" />
-                  open reference
+                  查看內容
                 </a>
               </div>
             </article>
@@ -55,18 +54,18 @@ export default function Certifications() {
         <aside className="space-y-5">
           <div className="glass-card">
             <div className="glass-card__inner">
-              <p className="mono text-xs uppercase tracking-[0.22em] text-[#8af7fe]">Now</p>
-              <h2 className="text-xl font-semibold text-white">What this version is doing</h2>
+              <p className="mono text-xs uppercase tracking-[0.22em] text-[#8af7fe]">現在</p>
+              <h2 className="text-xl font-semibold text-white">這一版網站正在做的事</h2>
               <p className="text-sm leading-7 text-zinc-300">
-                This portfolio is intentionally simple: connect GitHub work, give it a stronger presentation, and create a base I can keep expanding.
+                這個作品集目前刻意維持簡潔，先把 GitHub 上的作品整理成更有呈現感的網站，建立之後可以持續擴充的基礎。
               </p>
             </div>
           </div>
 
           <div className="glass-card">
             <div className="glass-card__inner">
-              <p className="mono text-xs uppercase tracking-[0.22em] text-[#8af7fe]">Next</p>
-              <h2 className="text-xl font-semibold text-white">What I can add later</h2>
+              <p className="mono text-xs uppercase tracking-[0.22em] text-[#8af7fe]">下一步</p>
+              <h2 className="text-xl font-semibold text-white">後續可以再補上的內容</h2>
               <ul className="space-y-3">
                 {secondaryMilestones.map((item) => (
                   <li key={item.title} className="rounded-2xl border border-[#39ff1420] bg-[#39ff1406] p-4">
