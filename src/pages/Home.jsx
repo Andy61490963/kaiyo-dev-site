@@ -49,16 +49,17 @@ export default function Home() {
 
           <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_220px] lg:items-center">
             <div className="space-y-5">
-            <h1 className="section-title max-w-4xl">
-              Andy
-              <span className="mt-3 block text-slate-500">
-                系統開發異質系統整合工程師
-              </span>
-            </h1>
+              <h1 className="section-title max-w-4xl">
+                Andy
+              </h1>
 
-            <p className="max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
-              具備三年系統開發實務經驗，把複雜流程整理成可落地的系統
-            </p>
+              <p className="max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
+                具備三年系統開發實務經驗，把複雜流程整理成可落地的系統
+              </p>
+
+              <p className="text-sm font-medium tracking-[0.08em] text-slate-500 sm:text-base whitespace-nowrap">
+                系統開發異質系統整合工程師
+              </p>
             </div>
 
             <motion.div
