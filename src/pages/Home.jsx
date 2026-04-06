@@ -49,12 +49,12 @@ export default function Home() {
           <div className="space-y-5">
             <h1 className="section-title max-w-4xl">
               Andy
-              <span className="mt-3 block bg-[linear-gradient(90deg,#39ff14_0%,#3df2ff_55%,#effff5_100%)] bg-clip-text text-transparent">
+              <span className="mt-3 block text-slate-500">
                 專注於後端開發、流程系統與系統整合
               </span>
             </h1>
 
-            <p className="max-w-3xl text-base leading-8 text-zinc-300 sm:text-lg">
+            <p className="max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
               您好，我是 Andy，擁有兩年系統開發與異質系統整合經驗。從需求訪談、系統設計到後期維護皆有實務經驗，具備獨立完成專案的能力。
             </p>
           </div>
@@ -72,29 +72,29 @@ export default function Home() {
 
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="terminal-outline rounded-2xl px-4 py-3">
-              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-[#88f8d4]">角色定位</div>
-              <div className="mt-2 text-sm text-zinc-100">{contact.title}</div>
+              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-slate-500">角色定位</div>
+              <div className="mt-2 text-sm text-slate-900">{contact.title}</div>
             </div>
 
             <div className="terminal-outline rounded-2xl px-4 py-3">
-              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-[#88f8d4]">Email</div>
+              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-slate-500">Email</div>
               <a
                 href={`mailto:${contact.email}`}
-                className="mt-2 inline-flex items-center gap-2 text-sm text-zinc-100 hover:text-[#b8ffb8]"
+                className="mt-2 inline-flex items-center gap-2 text-sm text-slate-900 hover:text-slate-700"
               >
                 {contact.email}
               </a>
             </div>
 
             <div className="terminal-outline rounded-2xl px-4 py-3 sm:col-span-2">
-              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-[#88f8d4]">GitHub</div>
+              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-slate-500">GitHub</div>
               <a
                 href={`https://github.com/${contact.githubUsername}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 inline-flex items-center gap-2 text-sm text-zinc-100 hover:text-[#b8ffb8]"
+                className="mt-2 inline-flex items-center gap-2 text-sm text-slate-900 hover:text-slate-700"
               >
-                <Github className="h-4 w-4 text-[#39ff14]" />
+                <Github className="h-4 w-4 text-slate-500" />
                 {contact.githubUsername}
               </a>
             </div>
@@ -108,28 +108,28 @@ export default function Home() {
           className="glass-card"
         >
           <div className="glass-card__inner">
-            <div className="flex items-center gap-2 text-[#7df48d]">
+            <div className="flex items-center gap-2 text-slate-500">
               <Rocket className="h-4 w-4" />
               <span className="mono text-[0.72rem] uppercase tracking-[0.22em]">履歷重點</span>
             </div>
-            <h2 className="text-2xl font-semibold text-white">從校務系統到 MES 流程，持續累積後端實務能力</h2>
-            <p className="text-sm leading-7 text-zinc-300">
+            <h2 className="text-2xl font-semibold text-slate-900">從校務系統到 MES 流程，持續累積後端實務能力</h2>
+            <p className="text-sm leading-7 text-slate-600">
               目前我在威友科技擔任後端工程師，負責產線流程分析、MES 作業流程導入、資料流規劃與系統重構；在此之前，曾於國立臺東大學系統發展組參與多項校務與行政系統開發。
             </p>
 
             <ul className="space-y-3">
               {featuredMilestones.map((item) => (
-                <li key={item.title} className="rounded-2xl border border-[#39ff1424] bg-[#39ff1408] p-4">
+                <li key={item.title} className="rounded-2xl border border-slate-200 bg-slate-50/80 p-4">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <p className="mono text-xs uppercase tracking-[0.2em] text-[#8af7fe]">{item.issuer}</p>
-                      <p className="mt-1 font-semibold text-white">{item.title}</p>
+                      <p className="mono text-xs uppercase tracking-[0.2em] text-slate-500">{item.issuer}</p>
+                      <p className="mt-1 font-semibold text-slate-900">{item.title}</p>
                     </div>
-                    <span className="rounded-full border border-[#39ff1424] px-2 py-1 text-[0.7rem] text-[#b8ffb8]">
+                    <span className="rounded-full border border-slate-200 bg-white px-2 py-1 text-[0.7rem] text-slate-600">
                       {item.type}
                     </span>
                   </div>
-                  <p className="mt-2 text-sm leading-6 text-zinc-300">{item.summary}</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{item.summary}</p>
                 </li>
               ))}
             </ul>
@@ -141,9 +141,9 @@ export default function Home() {
         {stats.map((item) => (
           <div key={item.label} className="glass-card">
             <div className="glass-card__inner">
-              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-[#8af7fe]">{item.label}</div>
-              <div className="text-4xl font-semibold text-[#d7ffd8]">{item.value}</div>
-              <div className="text-sm leading-6 text-zinc-400">{item.detail}</div>
+              <div className="mono text-[0.72rem] uppercase tracking-[0.22em] text-slate-500">{item.label}</div>
+              <div className="text-4xl font-semibold text-slate-900">{item.value}</div>
+              <div className="text-sm leading-6 text-slate-500">{item.detail}</div>
             </div>
           </div>
         ))}
@@ -153,11 +153,11 @@ export default function Home() {
         {coreAreas.map((item) => (
           <div key={item.title} className="glass-card">
             <div className="glass-card__inner">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#39ff1430] bg-[#39ff1410] text-[#7dff8f]">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-slate-700">
                 <item.icon className="h-5 w-5" />
               </div>
-              <h2 className="text-xl font-semibold text-white">{item.title}</h2>
-              <p className="text-sm leading-7 text-zinc-300">{item.text}</p>
+              <h2 className="text-xl font-semibold text-slate-900">{item.title}</h2>
+              <p className="text-sm leading-7 text-slate-600">{item.text}</p>
             </div>
           </div>
         ))}

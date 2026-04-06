@@ -10,7 +10,7 @@ export default function Certifications() {
   return (
     <>
       <SectionContainer subtitle="里程碑" title="目前最能代表我方向的能力與成長主題">
-        <div className="max-w-4xl space-y-4 text-base leading-8 text-zinc-300">
+        <div className="max-w-4xl space-y-4 text-base leading-8 text-slate-600">
           <p>
             這一頁不是傳統的證照頁，而是整理目前最能代表我方向的主題，像是持續交付實用軟體、累積後端能力，以及建立更完整的公開作品形象。
           </p>
@@ -27,15 +27,15 @@ export default function Certifications() {
               <div className="glass-card__inner">
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div>
-                    <p className="mono text-xs uppercase tracking-[0.22em] text-[#8af7fe]">{item.issuer}</p>
-                    <h2 className="mt-2 text-2xl font-semibold text-white">{item.title}</h2>
+                    <p className="mono text-xs uppercase tracking-[0.22em] text-slate-500">{item.issuer}</p>
+                    <h2 className="mt-2 text-2xl font-semibold text-slate-900">{item.title}</h2>
                   </div>
-                  <span className="rounded-full border border-[#39ff1424] bg-[#39ff1408] px-3 py-1 text-xs font-semibold text-[#b8ffb8]">
+                  <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-600">
                     {item.type}
                   </span>
                 </div>
 
-                <p className="text-sm leading-7 text-zinc-300">{item.summary}</p>
+                <p className="text-sm leading-7 text-slate-600">{item.summary}</p>
 
                 <a
                   href={item.href}
@@ -54,9 +54,9 @@ export default function Certifications() {
         <aside className="space-y-5">
           <div className="glass-card">
             <div className="glass-card__inner">
-              <p className="mono text-xs uppercase tracking-[0.22em] text-[#8af7fe]">現在</p>
-              <h2 className="text-xl font-semibold text-white">這一版網站正在做的事</h2>
-              <p className="text-sm leading-7 text-zinc-300">
+              <p className="mono text-xs uppercase tracking-[0.22em] text-slate-500">現在</p>
+              <h2 className="text-xl font-semibold text-slate-900">這一版網站正在做的事</h2>
+              <p className="text-sm leading-7 text-slate-600">
                 這個作品集目前刻意維持簡潔，先把 GitHub 上的作品整理成更有呈現感的網站，建立之後可以持續擴充的基礎。
               </p>
             </div>
@@ -64,13 +64,13 @@ export default function Certifications() {
 
           <div className="glass-card">
             <div className="glass-card__inner">
-              <p className="mono text-xs uppercase tracking-[0.22em] text-[#8af7fe]">下一步</p>
-              <h2 className="text-xl font-semibold text-white">後續可以再補上的內容</h2>
+              <p className="mono text-xs uppercase tracking-[0.22em] text-slate-500">下一步</p>
+              <h2 className="text-xl font-semibold text-slate-900">後續可以再補上的內容</h2>
               <ul className="space-y-3">
                 {secondaryMilestones.map((item) => (
-                  <li key={item.title} className="rounded-2xl border border-[#39ff1420] bg-[#39ff1406] p-4">
-                    <p className="font-semibold text-white">{item.title}</p>
-                    <p className="mt-2 text-sm leading-6 text-zinc-400">{item.summary}</p>
+                  <li key={item.title} className="rounded-2xl border border-slate-200 bg-slate-50/80 p-4">
+                    <p className="font-semibold text-slate-900">{item.title}</p>
+                    <p className="mt-2 text-sm leading-6 text-slate-500">{item.summary}</p>
                   </li>
                 ))}
               </ul>

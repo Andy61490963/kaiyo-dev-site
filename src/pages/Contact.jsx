@@ -40,7 +40,7 @@ export default function Contact() {
   return (
     <>
       <SectionContainer subtitle="聯絡我" title="我的聯絡方式與目前職涯方向">
-        <div className="max-w-3xl space-y-4 text-base leading-8 text-zinc-300">
+        <div className="max-w-3xl space-y-4 text-base leading-8 text-slate-600">
           <p>{contact.intro}</p>
           <p>{contact.availability}</p>
         </div>
@@ -51,12 +51,12 @@ export default function Contact() {
           const content = (
             <div className="glass-card h-full">
               <div className="glass-card__inner">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-200">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-slate-700">
                   <item.icon className="h-5 w-5" />
                 </div>
                 <div className="space-y-1">
-                  <p className="text-sm font-semibold text-white">{item.label}</p>
-                  <p className="break-all text-sm leading-7 text-zinc-300">{item.value}</p>
+                  <p className="text-sm font-semibold text-slate-900">{item.label}</p>
+                  <p className="break-all text-sm leading-7 text-slate-600">{item.value}</p>
                 </div>
               </div>
             </div>

@@ -7,7 +7,7 @@ export default function Projects() {
   return (
     <>
       <SectionContainer subtitle="作品集" title="根據履歷整理的代表性系統開發專案">
-        <div className="max-w-4xl space-y-4 text-base leading-8 text-zinc-300">
+        <div className="max-w-4xl space-y-4 text-base leading-8 text-slate-600">
           <p>
             這一頁整理的是我履歷中的核心專案經驗，重點放在實際有參與開發、規劃或整合的系統，而不是單純展示練習作品。
           </p>

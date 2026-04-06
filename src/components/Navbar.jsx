@@ -22,25 +22,25 @@ export default function Navbar() {
 
   return (
     <header className="fixed left-1/2 top-4 z-40 w-[calc(100%-1.25rem)] max-w-6xl -translate-x-1/2">
-      <nav className="rounded-[1.15rem] border border-[#39ff1429] bg-[#030a10e3] px-4 py-3 shadow-[0_18px_48px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:px-6">
+      <nav className="rounded-[1.15rem] border border-slate-200/90 bg-white/85 px-4 py-3 shadow-[0_12px_30px_rgba(15,23,42,0.08)] backdrop-blur-xl sm:px-6">
         <div className="flex items-center justify-between gap-4">
-          <NavLink to="/" className="flex min-w-0 items-center gap-3 text-white">
-            <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#39ff1430] bg-[#39ff1411] text-[#72ff8f]">
+          <NavLink to="/" className="flex min-w-0 items-center gap-3 text-slate-900">
+            <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-slate-700">
               <Code2 className="h-5 w-5" />
             </span>
             <span className="min-w-0">
-              <span className="mono block text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#8af7fe]">
+              <span className="mono block text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-slate-500">
                 Andy / 個人作品網站
               </span>
-              <span className="block truncate text-sm font-semibold text-zinc-100 sm:text-base">
-                全端開發 / 內部工具 / 網站應用
+              <span className="block truncate text-sm font-semibold text-slate-900 sm:text-base">
+                後端工程師 / 系統整合開發者
               </span>
             </span>
           </NavLink>
 
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-full border border-[#39ff1429] bg-[#39ff140d] p-2 text-[#b8ffb8] transition hover:bg-[#39ff1416] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#39ff14] sm:hidden"
+            className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white p-2 text-slate-700 transition hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 sm:hidden"
             onClick={() => setIsMobileOpen((prev) => !prev)}
             aria-label="切換導覽選單"
             aria-expanded={isMobileOpen}
@@ -58,8 +58,8 @@ export default function Navbar() {
                     clsx(
                       'mono inline-flex rounded-full px-3 py-2 transition xl:px-4',
                       isActive
-                        ? 'bg-[#39ff14] text-[#04110a] shadow-[0_0_22px_rgba(57,255,20,0.22)]'
-                        : 'text-zinc-300 hover:bg-[#39ff140f] hover:text-white'
+                        ? 'bg-slate-900 text-white'
+                        : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                     )
                   }
                 >
@@ -70,15 +70,15 @@ export default function Navbar() {
           </ul>
         </div>
 
-        <div className="mt-3 hidden items-center gap-2 border-t border-[#39ff1416] pt-3 text-[0.72rem] text-zinc-400 lg:flex">
-          <TerminalSquare className="h-4 w-4 text-[#39ff14]" />
+        <div className="mt-3 hidden items-center gap-2 border-t border-slate-200 pt-3 text-[0.72rem] text-slate-500 lg:flex">
+          <TerminalSquare className="h-4 w-4 text-slate-500" />
           <span className="mono">狀態：持續更新中 / 角色：軟體開發者 / 模式：個人作品集</span>
         </div>
 
         <ul
           id="primary-navigation"
           className={clsx(
-            'mt-3 grid gap-2 border-t border-[#39ff1416] pt-3 text-sm font-medium lg:hidden',
+            'mt-3 grid gap-2 border-t border-slate-200 pt-3 text-sm font-medium lg:hidden',
             isMobileOpen ? 'grid' : 'hidden'
           )}
         >
@@ -90,8 +90,8 @@ export default function Navbar() {
                   clsx(
                     'mono block rounded-xl px-4 py-3 transition',
                     isActive
-                      ? 'bg-[#39ff14] text-[#04110a]'
-                      : 'bg-white/[0.02] text-zinc-200 hover:bg-[#39ff140f]'
+                      ? 'bg-slate-900 text-white'
+                      : 'bg-slate-50 text-slate-700 hover:bg-slate-100'
                   )
                 }
               >

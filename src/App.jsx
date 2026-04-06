@@ -11,11 +11,11 @@ import Articles from './pages/Articles.jsx'
 
 export default function App() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden font-sans text-zinc-100 selection:bg-[#39ff1455] selection:text-white">
+    <div className="relative min-h-screen overflow-x-hidden font-sans text-slate-900 selection:bg-slate-900 selection:text-white">
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute left-[-8rem] top-12 h-72 w-72 rounded-full bg-[#39ff1410] blur-[120px]" />
-        <div className="absolute right-[-5rem] top-32 h-80 w-80 rounded-full bg-[#3df2ff10] blur-[130px]" />
-        <div className="absolute bottom-[-6rem] left-1/3 h-80 w-80 rounded-full bg-[#39ff140e] blur-[140px]" />
+        <div className="absolute left-[-8rem] top-12 h-72 w-72 rounded-full bg-sky-200/50 blur-[120px]" />
+        <div className="absolute right-[-5rem] top-32 h-80 w-80 rounded-full bg-indigo-100/70 blur-[130px]" />
+        <div className="absolute bottom-[-6rem] left-1/3 h-80 w-80 rounded-full bg-blue-100/70 blur-[140px]" />
       </div>
 
       <Navbar />

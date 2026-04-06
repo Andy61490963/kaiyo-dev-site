@@ -15,25 +15,25 @@ export default function ProjectCard({ project }) {
         <div className="space-y-3">
           <div className="flex items-start justify-between gap-4">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-200/80">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
                 {project.category}
               </p>
-              <h3 className="mt-2 text-xl font-semibold leading-snug text-white">
+              <h3 className="mt-2 text-xl font-semibold leading-snug text-slate-900">
                 {project.title}
               </h3>
             </div>
             {project.year && (
-              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-zinc-300">
+              <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-slate-500">
                 {project.year}
               </span>
             )}
           </div>
-          <p className="text-sm leading-7 text-zinc-300">{project.description}</p>
+          <p className="text-sm leading-7 text-slate-600">{project.description}</p>
         </div>
 
-        <ul className="flex flex-wrap gap-2 text-xs text-zinc-200">
+        <ul className="flex flex-wrap gap-2 text-xs text-slate-600">
           {project.tech.map((tag) => (
-            <li key={tag} className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5">
+            <li key={tag} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5">
               {tag}
             </li>
           ))}
@@ -45,7 +45,7 @@ export default function ProjectCard({ project }) {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-cyan-300 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-900 bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800"
             >
               <Github className="h-4 w-4" />
               原始碼
@@ -56,7 +56,7 @@ export default function ProjectCard({ project }) {
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
             >
               <ExternalLink className="h-4 w-4" />
               線上展示

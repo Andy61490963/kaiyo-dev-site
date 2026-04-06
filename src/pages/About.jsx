@@ -33,7 +33,7 @@ export default function About() {
   return (
     <>
       <SectionContainer subtitle="關於我" title="專注於後端開發、流程系統與系統整合的工程師">
-        <div className="max-w-4xl space-y-5 text-base leading-8 text-zinc-300">
+        <div className="max-w-4xl space-y-5 text-base leading-8 text-slate-600">
           <p>
             我是許愷佑，英文名 Andy，畢業於國立臺東大學資訊工程學系。目前在威友科技擔任後端工程師，持續投入系統開發、MES 流程導入與異質系統整合工作。
           </p>
@@ -51,11 +51,11 @@ export default function About() {
           {strengths.map((item) => (
             <article key={item.title} className="glass-card">
               <div className="glass-card__inner">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-200">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-slate-700">
                   <item.icon className="h-5 w-5" />
                 </div>
-                <h3 className="text-xl font-semibold text-white">{item.title}</h3>
-                <p className="text-sm leading-7 text-zinc-300">{item.text}</p>
+                <h3 className="text-xl font-semibold text-slate-900">{item.title}</h3>
+                <p className="text-sm leading-7 text-slate-600">{item.text}</p>
               </div>
             </article>
           ))}
@@ -65,7 +65,7 @@ export default function About() {
       <SectionContainer subtitle="技術能力" title="履歷中主要使用的技術與系統工具">
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill) => (
-            <li key={skill} className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4 text-sm leading-7 text-zinc-200">
+            <li key={skill} className="rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-4 text-sm leading-7 text-slate-700">
               {skill}
             </li>
           ))}
