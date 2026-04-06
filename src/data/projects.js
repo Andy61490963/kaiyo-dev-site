@@ -1,6 +1,6 @@
 ﻿export const projects = [
   {
-    title: '車證申請系統',
+    title: '車證申請',
     category: '校務流程系統',
     year: '2024',
     description:
@@ -10,7 +10,7 @@
     demo: "https://vehicle.nttu.edu.tw/",
   },
   {
-    title: '校安事件通報系統',
+    title: '校安事件通報',
     category: '行政通報系統',
     year: '2024',
     description:
@@ -20,7 +20,7 @@
     demo: null,
   },
   {
-    title: '新生健檢系統',
+    title: '新生健檢',
     category: '資料整合系統',
     year: '2024',
     description:
@@ -30,7 +30,7 @@
     demo: null,
   },
   {
-    title: '修繕管理系統',
+    title: '修繕管理',
     category: '工單管理系統',
     year: '2025',
     description:
@@ -40,12 +40,22 @@
     demo: "https://repairs.nttu.edu.tw/",
   },
   {
-    title: '新版虛擬書架系統',
+    title: '新版虛擬書架',
     category: '內容管理系統',
     year: '2025',
     description:
       '建立個人書櫃與收藏管理功能，解決多層分類、批次操作與內容整理效率問題',
     tech: ['C#', 'ASP.NET Core MVC', '內容管理', '分類設計'],
+    github: null,
+    demo: null,
+  },
+  {
+    title: '主檔維護',
+    category: '資料表管理系統',
+    year: '2025',
+    description:
+      '建構可配置式資料管理平台，透過動態欄位設定支援一對多與多對多關聯的 CRUD 操作',
+    tech: ['C#', 'ASP.NET Core Api', '內容管理', '系統設計'],
     github: null,
     demo: null,
   },
