@@ -32,7 +32,7 @@ const skills = [
 export default function About() {
   return (
     <>
-      <SectionContainer subtitle="關於我" title="專注流程型系統開發與整合的後端工程師">
+      <SectionContainer subtitle="關於我" title="流程型系統開發與整合的後端工程師">
         <div className="max-w-4xl space-y-5 text-base leading-8 text-slate-600">
           <p>
             我是 Andy，現職後端工程師，具備 3 年系統開發與異質系統整合實務經驗。工作內容以流程型系統為主，包含需求分析、後端開發、資料流規劃與上線後維護
