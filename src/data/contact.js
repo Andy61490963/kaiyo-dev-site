@@ -1,4 +1,4 @@
-﻿export const contact = {
+export const contact = {
   name: 'Andy',
   title: 'Full-stack Developer / Internal Tool Builder',
   githubUsername: 'Andy61490963',

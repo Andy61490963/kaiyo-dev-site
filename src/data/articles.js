@@ -1,4 +1,4 @@
-﻿export const articles = [
+export const articles = [
   {
     title: 'What I Want This Site To Become',
     platform: 'Portfolio',

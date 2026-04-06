@@ -1,4 +1,4 @@
-﻿export const certifications = [
+export const certifications = [
   {
     title: 'Shipping Practical Software',
     shortTitle: 'Build',

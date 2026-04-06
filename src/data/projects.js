@@ -1,4 +1,4 @@
-﻿export const projects = [
+export const projects = [
   {
     title: 'Course Selection System API',
     category: 'Backend API',
