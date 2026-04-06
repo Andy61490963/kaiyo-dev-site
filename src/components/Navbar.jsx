@@ -55,7 +55,7 @@ export default function Navbar({ isDarkMode, onToggleTheme }) {
               <span className="mono block text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-slate-500">
                 Andy Portfolio
               </span>
-              <span className="block truncate text-sm font-semibold text-slate-900 sm:text-base">
+              <span className="navbar-subtitle block truncate text-sm font-semibold sm:text-base">
                 後端開發 / 系統整合 / 流程型系統
               </span>
             </span>
@@ -68,10 +68,8 @@ export default function Navbar({ isDarkMode, onToggleTheme }) {
                 to={item.to}
                 className={({ isActive }) =>
                   clsx(
-                    'mono inline-flex rounded-full px-3 py-2 transition duration-200 xl:px-4',
-                    isActive
-                      ? 'bg-slate-900 text-white shadow-[0_10px_24px_rgba(15,23,42,0.12)]'
-                      : 'text-slate-600 hover:bg-white hover:text-slate-900'
+                    'navbar-link mono inline-flex rounded-full px-3 py-2 transition duration-200 xl:px-4',
+                    isActive && 'navbar-link--active'
                   )
                 }
               >
@@ -131,8 +129,8 @@ export default function Navbar({ isDarkMode, onToggleTheme }) {
                 to={item.to}
                 className={({ isActive }) =>
                   clsx(
-                    'mono block rounded-xl px-4 py-3 transition duration-200',
-                    isActive ? 'bg-slate-900 text-white' : 'bg-white/70 text-slate-700 hover:bg-white'
+                    'navbar-mobile-link mono block rounded-xl px-4 py-3 transition duration-200',
+                    isActive && 'navbar-mobile-link--active'
                   )
                 }
               >
