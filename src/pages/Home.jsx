@@ -59,7 +59,7 @@ export default function Home() {
               </p>
 
               <p className="inline-flex w-fit whitespace-nowrap rounded-full border border-slate-200/80 bg-white/80 px-4 py-2 text-sm font-medium tracking-[0.08em] text-slate-500 sm:text-base">
-                系統開發異質系統整合工程師
+                系統開發&整合工程師
               </p>
             </div>
 
@@ -135,7 +135,7 @@ export default function Home() {
             </div>
 
             <h2 className="text-2xl font-semibold leading-snug text-slate-900">
-              用後端與流程設計，把真實場景中的複雜問題整理清楚
+              提供最佳解決方案
             </h2>
 
             <p className="text-sm leading-7 text-slate-600">
