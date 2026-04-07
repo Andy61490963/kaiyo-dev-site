@@ -15,6 +15,8 @@ export default function Projects() {
           </p>
           <p>
             受公司資產（著作權屬於公司），無法放置原始碼
+            <br />
+            <span className="text-red-600">請點擊查看內容</span>
           </p>
         </div>
       </SectionContainer>
